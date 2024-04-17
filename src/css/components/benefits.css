@@ -71,6 +71,9 @@ max-width: 187px;
 }
 
 @media screen and (min-width: 768px) {
+.benefits {
+    padding: 48px 0;
+  }
 .benefits-list {
     display: flex;
     flex-direction: row;
