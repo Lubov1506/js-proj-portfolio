@@ -1,0 +1,53 @@
+@import url('modern-normalize/modern-normalize.css');
+@import url('@fontsource/inter-tight/latin-500.css');
+@import url('@fontsource/inter-tight/latin-600.css');
+
+:root {
+  --font-family: 'Inter Tight', sans-serif;
+  --background: #1c1d20;
+  --button-text: #ed3b44;
+  --main-text: #fafafa;
+  --cards: #242527;
+  --arrow: #3b3b3b;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--main-text);
+  background-color: var(--background);
+}
+/* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
