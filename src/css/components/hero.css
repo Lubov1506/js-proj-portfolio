@@ -1,4 +1,61 @@
-/* щоб не сварилась збірка)) */
-p{
-  padding: 0;
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../img/hero/bgc/mob@1x.png');
+  min-height: 612px;
+  padding-bottom: 32px;
+  padding-top: 281px;
+}
+
+@media only screen and (max-width: 767.98px) and (min-resolution: 192dpi) {
+  .hero-container {
+    background-image: url('../../img/hero/bgc/mob@2x.png');
+  }
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero-title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--main-text);
+}
+.hero-ccontacts-wrap {
+  margin-top: 212px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.hero-soc-list {
+  display: flex;
+  gap: 4;
+}
+.hero-soc-item {
+}
+.hero-soc-link {
+  min-width: 37px;
+  min-height: 37px;
+  padding: 10px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
 }
