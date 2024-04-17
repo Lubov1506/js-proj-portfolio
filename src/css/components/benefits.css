@@ -69,3 +69,18 @@ align-items: center;
 padding: 18px 36px;
 max-width: 187px;
 }
+
+@media screen and (min-width: 768px) {
+.benefits-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-bottom: 64px;
+  }
+
+.benefits-item {
+flex-basis: calc((100% - 16px) / 2);
+}
+}
