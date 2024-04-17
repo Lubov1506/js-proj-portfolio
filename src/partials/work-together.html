@@ -1,1 +1,87 @@
-<h2>Work together</h2>
+<div class="container">
+  <section class="work-together-section" id="work-together">
+    <h2 class="work-together-title">
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./img/work-together/tab/avatarx1.png 1x,
+            ./img/work-together/tab/avatarx2.png 2x
+          "
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ./img/work-together/mob/avatarx1.png 1x,
+            ./img/work-together/mob/avatarx2.png 2x
+          "
+        />
+        <img
+          class="work-together-avatar"
+          src="./img/work-together/mob/avatarx1.png"
+          alt="avatar"
+        />
+      </picture>
+      Let’s <span class="work-together-span">work</span><br />together
+    </h2>
+    <form class="work-together-form">
+      <input
+        type="email"
+        name="email"
+        id="work-together-email"
+        class="work-together-input"
+        placeholder="clients@gmail.com"
+      />
+      <p class="email-correct">Succes!</p>
+      <input
+        type="text"
+        name="comment"
+        id="work-together-comment"
+        class="work-together-input"
+        placeholder="comments"
+      />
+      <button class="work-together-button" type="submit">Send</button>
+    </form>
+    <div class="work-together-wrapper-contacts">
+      <a href="mailto:lloydjefferson@gmail.com" class="work-together-contact"
+        >lloydjefferson@gmail.com</a
+      ><a href="tel:+3801111111111" class="work-together-contact"
+        >+380 11 1111 11 11</a
+      >
+    </div>
+  </section>
+</div>
+<div class="backdrop"></div>
+<div class="work-together-modal-window">
+  <button type="button" class="work-together-modal-btn">
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16.5 5.5L5.5 16.5"
+        stroke="#FAFAFA"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M5.5 5.5L16.5 16.5"
+        stroke="#FAFAFA"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+  <h2 class="work-together-modal-title">
+    Thank you for your interest in cooperation!
+  </h2>
+  <p class="work-together-modal-text">
+    The manager will contact you shortly to discuss further details and
+    opportunities for cooperation. Please stay in touch.
+  </p>
+</div>
