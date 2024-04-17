@@ -81,6 +81,11 @@ align-items: center;
 
 max-width: 187px;
 height: 55px;
+transition: borderColor 250ms ease-in;
+}
+
+.order-project-link:active {
+border-color: rgb(250, 250, 250);
 }
 
 @media screen and (min-width: 768px) {
@@ -113,6 +118,11 @@ flex-basis: calc((100% - 16px) / 2);
 .list-wrapper {
 max-width: 680px;
 
+}
+
+.order-project-link:hover,
+.order-project-link:focus {
+  border-color: rgb(250, 250, 250);
 }
 
 }
