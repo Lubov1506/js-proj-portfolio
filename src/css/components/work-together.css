@@ -1,4 +1,309 @@
-/* щоб не сварилась збірка)) */
-p{
-  padding: 0;
+.work-together-section {
+  padding-bottom: 32px;
+  padding-top: 64px;
+}
+.work-together-avatar {
+  display: inline-block;
+  transform: translateY(5px);
+}
+.work-together-title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--main-text);
+  margin-bottom: 63px;
+}
+.work-together-span {
+  color: var(--button-text);
+}
+.work-together-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+  position: relative;
+}
+.work-together-input {
+  text-overflow: ellipsis;
+  width: 100%;
+  background-color: transparent;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+  box-shadow: none;
+  border: none;
+  border-bottom: solid 1px rgba(250, 250, 250, 0.5);
+  transition: border-color 200ms ease-in-out;
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+  outline: none;
+}
+
+.work-together-input:placeholder-shown {
+  border-color: rgba(250, 250, 250, 0.2);
+}
+
+.work-together-input::placeholder {
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.correct-input {
+  border-color: #3cbc81;
+}
+
+.incorrect-input {
+  border-color: #e74a3b;
+}
+
+.work-together-email-lable {
+  position: relative;
+}
+
+.email-text {
+  opacity: 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+  position: absolute;
+  bottom: -4px;
+  transform: translateX(-100%);
+  transition: color 200ms ease-in-out, transform 200ms ease-in-out,
+    opacity 200ms ease-in-out;
+}
+
+.correct-text {
+  opacity: 1;
+  transform: translateX(0);
+  color: #3cbc81;
+}
+
+.incorrect-text {
+  opacity: 1;
+  transform: translateX(0);
+  color: #e74a3b;
+}
+
+.work-together-input:first-child {
+  margin-bottom: 16px;
+}
+.work-together-button {
+  width: 100px;
+  height: 100px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+  border-radius: 100%;
+  background-color: var(--button-text);
+  border: none;
+  transition: background-color 200ms ease-in-out;
+}
+
+.work-together-button:active {
+  background-color: #e0373f;
+}
+
+.work-together-wrapper-contacts {
+  width: 300px;
+  display: flex;
+  gap: 4px;
+}
+
+.work-together-contact {
+  text-align: center;
+  width: fit-content;
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+  padding: 10px 12px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  text-wrap: nowrap;
+  transition: border-color 200ms ease-in-out;
+}
+
+.work-together-contact:active {
+  border-color: var(--main-text);
+}
+
+@media screen and (min-width: 768px) {
+  .work-together-section {
+    padding-top: 128px;
+    padding-bottom: 169px;
+  }
+  .work-together-avatar {
+    display: inline-block;
+    transform: translateY(12px);
+  }
+  .work-together-title {
+    font-size: 64px;
+    margin-bottom: 18px;
+  }
+  .work-together-form {
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 18px;
+    align-items: center;
+  }
+  .work-together-input {
+    width: 245px;
+    margin-bottom: 0;
+  }
+  .work-together-input:first-child {
+    margin-bottom: 0;
+  }
+
+  .email-text {
+    bottom: -18px;
+  }
+
+  .work-together-button {
+    width: 150px;
+    height: 150px;
+  }
+  .work-together-wrapper-contacts {
+    width: 418px;
+    gap: 8px;
+  }
+
+  .work-together-contact {
+    font-size: 16px;
+    padding: 18px 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .work-together-section {
+    padding-top: 162px;
+  }
+  .work-together-avatar {
+    display: inline-block;
+    transform: translateY(12px);
+  }
+  .work-together-form {
+    gap: 0px;
+  }
+  .work-together-input {
+    width: 390px;
+  }
+  .work-together-input:first-child {
+    margin-right: 32px;
+  }
+
+  .work-together-button {
+    margin-left: 86px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .work-together-button:hover,
+  .work-together-button:focus {
+    background-color: #e0373f;
+  }
+
+  .work-together-contact:hover,
+  .work-together-contact:focus {
+    border-color: var(--main-text);
+  }
+}
+
+/* #region modal window */
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--background);
+}
+
+.is-open {
+  opacity: 0.6;
+  visibility: visible;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.work-together-modal-window {
+  width: 343px;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  padding: 64px 32px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  background-color: var(--background);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 400ms ease-in-out, visibility 400ms ease-in-out,
+    transform 400ms ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .work-together-modal-window {
+    transform: translate(-200%, -50%);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .work-together-modal-window {
+    transform: translate(-300%, -50%);
+  }
+}
+.window-is-open {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  visibility: visible;
+  z-index: 1000;
+}
+.work-together-modal-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.work-together-modal-svg {
+  stroke: white;
+}
+
+.work-together-modal-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--main-text);
+  margin-bottom: 16px;
+}
+.work-together-modal-text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
+}
+/* #endregion modal window */
+
+.backdrop-opened {
+  visibility: unset;
 }
