@@ -61,6 +61,11 @@
   background: transparent;
   border: transparent;
 }
+@media (max-width: 768px) {
+  .header-nav-list {
+display: none;
+  }
+}
 
 @media (min-width: 768px) {
   .header-btn-mobile-menu-open {

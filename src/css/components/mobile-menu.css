@@ -1,4 +1,4 @@
-/* .mobile-menu-bg.is-open {
+.mobile-menu-bg.is-open {
     visibility: visible;
     opacity: 1;
     transform: translateX(0);
@@ -17,12 +17,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 1;
+    transition: transform 0.5s;
 }
-@media only screen and (min-width: 767.98px) {
-    .mobile-menu-bg {
-        display: none;
-    }
-}
+
 .mobile-menu {
     position: relative;
     display: flex;
@@ -74,4 +71,9 @@
 .mobile-link:hover,
 .mobile-link:focus{
     background-color: #e0373f;
-} */
+}
+@media only screen and (min-width: 767.98px) {
+    .mobile-menu-bg {
+        display: none;
+    }
+}
