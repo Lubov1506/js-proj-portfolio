@@ -25,6 +25,12 @@
     </symbol>
     <symbol id="icon-x" viewBox="0 0 32 32">
 <path stroke-width="2.6667" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="round" d="M24 8l-16 16M8 8l16 16"></path>
+</symbol>    <symbol id="icon-faq-down" viewBox="0 0 32 32">
+<path d="M32 10.8l-5.988-5.802-10.012 10.138-10.012-10.138-5.988 5.802 16 16.203 16-16.203zM5.957 7.811l10.043 10.17 10.043-10.17 3.116 3.020-13.159 13.326-13.159-13.326 3.116-3.020z"></path>
 </symbol>
+  
+    
+    
+
   </defs>
 </svg>
