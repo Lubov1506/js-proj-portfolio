@@ -9,23 +9,17 @@
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 
-// const swiperEl = document.querySelector(.swiper-container);
 // document.addEventListener('DOMContentLoaded', function () {
-//   const swiper = new Swiper('.swiper-container', {
+//     const swiper = new Swiper('.programmer-language', {
 //       direction: 'horizontal',
 //       loop: true,
-//       navigation: {
-//           nextEl: '.swiper-button-next',
-//           prevEl: '.swiper-button-prev',
-//       },
 //       keyboard: {
-//           enabled: true,
+//         enabled: true,
 //       },
-//       mousewheel: {
-//           enabled: true,
+//       navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
 //       },
+//     });
 //   });
-// });
-
-
 
