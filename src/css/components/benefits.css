@@ -1,4 +1,129 @@
-/* щоб не сварилась збірка)) */
-p{
-  padding: 0;
+
+.benefits {
+  padding: 32px 0;
 }
+
+.benefits-title {
+color: rgba(250, 250, 250, 0.40);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; 
+letter-spacing: -0.32px;
+text-transform: uppercase;
+
+margin-bottom: 32px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-bottom: 32px;
+
+}
+
+
+.benefits-item {
+padding: 24px;
+border-radius: 20px;
+background: #242527;
+}
+
+.svg-wrapper {
+  border-radius: 10px;
+  background: #ED3B44;
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 64px;
+}
+.benefit-svg {
+  stroke: rgba(250, 250, 250, 1);
+  fill: #ED3B44;
+}
+.benefit-name {
+
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 30px; 
+letter-spacing: -0.4px;
+
+margin-bottom: 8px;
+}
+
+.benefit-descr {
+
+color: rgba(250, 250, 250, 0.60);
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; 
+letter-spacing: -0.32px;
+}
+
+.order-project-link {
+border-radius: 60px;
+border: 1px solid rgba(250, 250, 250, 0.20);
+
+display: flex;
+
+justify-content: center;
+align-items: center;
+
+
+
+max-width: 187px;
+height: 55px;
+transition: borderColor 250ms ease-in;
+}
+
+.order-project-link:active {
+border-color: rgb(250, 250, 250);
+}
+
+@media screen and (min-width: 768px) {
+.benefits {
+    padding: 48px 0;
+  }
+.benefits-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-bottom: 64px;
+  }
+
+.benefits-item {
+flex-basis: calc((100% - 16px) / 2);
+}
+}
+
+
+@media screen and (min-width: 1440px) {
+.benefits {
+    padding: 82px 0;
+  }
+.benefit-container {
+  display: flex;
+  justify-content: space-between;
+}
+.list-wrapper {
+max-width: 680px;
+
+}
+
+.order-project-link:hover,
+.order-project-link:focus {
+  border-color: rgb(250, 250, 250);
+}
+
+}
+
