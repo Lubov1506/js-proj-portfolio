@@ -1,5 +1,6 @@
 .work-together-section {
-  padding: 32px 0;
+  padding-bottom: 32px;
+  padding-top: 64px;
 }
 .work-together-avatar {
   display: inline-block;
@@ -138,7 +139,7 @@
 
 @media screen and (min-width: 768px) {
   .work-together-section {
-    padding-top: 88px;
+    padding-top: 128px;
     padding-bottom: 169px;
   }
   .work-together-avatar {
@@ -189,7 +190,7 @@
 
 @media screen and (min-width: 1440px) {
   .work-together-section {
-    padding-top: 80px;
+    padding-top: 162px;
   }
   .work-together-avatar {
     display: inline-block;
