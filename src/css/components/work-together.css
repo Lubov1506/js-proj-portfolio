@@ -22,8 +22,11 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 64px;
+  position: relative;
 }
 .work-together-input {
+  text-overflow: ellipsis;
+  width: 100%;
   background-color: transparent;
   font-family: var(--font-family);
   font-weight: 500;
@@ -39,6 +42,7 @@
   margin-bottom: 32px;
   outline: none;
 }
+
 .work-together-input:placeholder-shown {
   border-color: rgba(250, 250, 250, 0.2);
 }
@@ -47,19 +51,42 @@
   color: rgba(250, 250, 250, 0.6);
 }
 
-.email-correct {
+.correct-input {
   border-color: #3cbc81;
+}
+
+.incorrect-input {
+  border-color: #e74a3b;
+}
+
+.work-together-email-lable {
+  position: relative;
+}
+
+.email-text {
+  opacity: 0;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 14px;
   line-height: 129%;
   letter-spacing: -0.02em;
-  color: #3cbc81;
   position: absolute;
+  bottom: -4px;
+  transform: translateX(-100%);
+  transition: color 200ms ease-in-out, transform 200ms ease-in-out,
+    opacity 200ms ease-in-out;
 }
 
-.email-incorrect {
-  border-color: #080302;
+.correct-text {
+  opacity: 1;
+  transform: translateX(0);
+  color: #3cbc81;
+}
+
+.incorrect-text {
+  opacity: 1;
+  transform: translateX(0);
+  color: #e74a3b;
 }
 
 .work-together-input:first-child {
@@ -131,6 +158,11 @@
   .work-together-input:first-child {
     margin-bottom: 0;
   }
+
+  .email-text {
+    bottom: -18px;
+  }
+
   .work-together-button {
     width: 150px;
     height: 150px;
@@ -160,8 +192,8 @@
   .work-together-input {
     width: 390px;
   }
-  .work-together-input:nth-child(2) {
-    margin-left: 32px;
+  .work-together-input:first-child {
+    margin-right: 32px;
   }
 
   .work-together-button {
@@ -210,12 +242,26 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-100%, -50%);
   background-color: var(--background);
   opacity: 0;
   visibility: hidden;
+  transition: opacity 400ms ease-in-out, visibility 400ms ease-in-out,
+    transform 400ms ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .work-together-modal-window {
+    transform: translate(-200%, -50%);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .work-together-modal-window {
+    transform: translate(-300%, -50%);
+  }
 }
 .window-is-open {
+  transform: translate(-50%, -50%);
   opacity: 1;
   visibility: visible;
   z-index: 1000;
