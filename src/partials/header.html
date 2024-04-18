@@ -3,35 +3,43 @@
     <div class="header-inner">
       <div class="header-logo">
         <div class="header-img-block">
+          <picture>
+            <source
+              media="(min-width: 320px)"
+              srcset="../img/header/logox1.png 1x, ../img/header/logox2.png 2x"
+            />
+            <img src="../img/header/logox1.png" alt="Logo Lloyd Jefferson">
+          </picture>
+
           <img src="../img/header/logo.jpg" alt="" class="header-logo-img" />
         </div>
         <p class="header-logo-name">jefferson*</p>
       </div>
       <div class="header-menu-block">
-          <button class="header-open-menu-btn" type="button">
-            <span class="header-open-menu-span">Menu</span>
-          </button>
-          <nav class="header-nav">
-            <ul class="header-nav-list is-hidden">
-              <li class="header-nav-item">
-                <a class="header-nav-link" href="">About me</a>
-              </li>
-              <li class="header-nav-item">
-                <a class="header-nav-link" href="">Benefits</a>
-              </li>
-              <li class="header-nav-item">
-                <a class="header-nav-link" href="">Projects</a>
-              </li>
-              <li class="header-nav-item">
-                <a class="header-nav-link" href="">FAQ</a>
-              </li>
-            </ul>
+        <button class="header-open-menu-btn" type="button">
+          <span class="header-open-menu-span">Menu</span>
+        </button>
+        <nav class="header-nav">
+          <ul class="header-nav-list is-hidden">
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="">About me</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="">Benefits</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="">Projects</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="">FAQ</a>
+            </li>
+          </ul>
         </nav>
-    </div>
-    <a class="header-link" href="#work-together">Order the project</a>
+      </div>
+      <a class="header-link" href="#work-together">Order the project</a>
       <button class="header-btn-mobile-menu-open" type="button">
         <svg class="header-icon-menu-open" width="28" height="28">
-          <use href="../img/header/icons.svg#icon-menu-btn-open"></use>
+          <use href="../img/icons.svg#icon-menu-btn-open"></use>
         </svg>
       </button>
     </div>
