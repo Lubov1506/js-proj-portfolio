@@ -181,11 +181,6 @@
     font-size: 16px;
     padding: 18px 32px;
   }
-
-  .work-together-contact:focus,
-  .work-together-contact:hover {
-    border-color: var(--main-text);
-  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -283,6 +278,11 @@
   background-color: transparent;
   border: none;
 }
+
+.work-together-modal-svg {
+  stroke: white;
+}
+
 .work-together-modal-title {
   font-family: var(--font-family);
   font-weight: 600;
