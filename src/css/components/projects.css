@@ -19,7 +19,7 @@
   margin-top: 32px;
 }
 .projects-content-list {
-  padding: 64px;
+  padding: 32px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
