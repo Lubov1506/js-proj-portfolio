@@ -46,15 +46,8 @@ const submitHandler = event => {
 };
 
 const emailValidation = mail => {
-  return (
-    mail.includes('@') &&
-    mail.indexOf('@') !== 0 &&
-    mail.includes('.') &&
-    mail.indexOf('@') === mail.lastIndexOf('@') &&
-    mail.lastIndexOf('.') > mail.lastIndexOf('@') &&
-    mail.indexOf('.') !== mail.length - 1 &&
-    mail.lastIndexOf('.') - mail.indexOf('@') > 1
-  );
+  const validRegex = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  return mail.match(validRegex);
 };
 const inputCheckHandler = event => {
   const mail = emailInput.value;
