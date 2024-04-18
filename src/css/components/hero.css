@@ -21,7 +21,7 @@
 
 @media only screen and (min-width: 768px) {
   .hero-container {
-     min-height: 1024px;
+    min-height: 1024px;
     background-size: 728px 100%;
     background-position: -187px;
     background-image: url('../../img/hero/bgc/desk@1x.png');
@@ -35,7 +35,7 @@
 
 @media only screen and (min-width: 1440px) {
   .hero-container {
-     min-height: 900px;
+    min-height: 900px;
     background-position: left;
     background-image: url('../../img/hero/bgc/desk@1x.png');
   }
@@ -96,13 +96,13 @@
   letter-spacing: -0.02em;
   color: var(--main-text);
 
-  transition: borderColor 250ms ease-in;
+  transition: border-color var(--transition-pattern);
 }
 .hero-email {
   height: 37px;
   padding: 10px;
 }
-.hero-soc-link:hover{
+.hero-soc-link:hover {
   border-color: #fafafa;
 }
 @media only screen and (min-width: 768px) {
