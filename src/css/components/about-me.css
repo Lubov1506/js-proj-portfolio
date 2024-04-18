@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .about-me-container {
     flex-direction: row;
     gap: 16px;
@@ -202,8 +202,12 @@ height: 40px;
 }
 
 .programmer-language {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
   margin-top: 32px;
   margin-bottom: 32px;
+  
 }
 @media screen and (min-width: 768px) {
   .programmer-language {
@@ -216,6 +220,8 @@ height: 40px;
   .programmer-language {
     margin-top: 96px;
     margin-bottom: 115px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
@@ -253,15 +259,34 @@ height: 40px;
   .programmer-language-item:nth-child(n + 4) {
     display: none;
     font-size: 20px;
+    width: 200px;
+    height: 200px;
   }
 }
 
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 768px) {
   .programmer-language-item {
     font-size: 20px;
     display: list-item;
     width: 200px;
     height: 200px;
     padding-top: 88px;
+  }
+}
+
+.icon-svg-arrow-right{
+  stroke-width: 2px;
+stroke: #3b3b3b;
+width: 28px;
+height: 28px;
+fill: none;
+margin-top: 51px;
+}
+
+@media screen and (min-width: 768px) {
+  .icon-svg-arrow-right{
+  width: 40px;
+  height: 40px;
+  margin-top: 80px;
   }
 }
