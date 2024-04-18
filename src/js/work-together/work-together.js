@@ -12,6 +12,7 @@ const modalWindow = document.querySelector('.work-together-modal-window');
 const closeModalBtn = document.querySelector('.work-together-modal-btn');
 
 const onCloseBtn = event => {
+  document.body.classList.remove('backdrop-opened');
   backdrop.classList.remove('is-open');
   modalWindow.classList.remove('window-is-open');
   closeModalBtn.removeEventListener('click', onCloseBtn);
@@ -19,12 +20,14 @@ const onCloseBtn = event => {
 
 const submitHandler = event => {
   event.preventDefault();
+  event.target.reset();
   axios
     .post('/requests', {
       email: emailInput.value,
       comment: commentInput.value,
     })
     .then(data => {
+      document.body.classList.add('backdrop-opened');
       backdrop.classList.add('is-open');
       modalWindow.classList.add('window-is-open');
       closeModalBtn.addEventListener('click', onCloseBtn);
