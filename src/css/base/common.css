@@ -11,7 +11,9 @@
   --arrow: #3b3b3b;
   --transition-pattern: 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font-family);
   color: var(--main-text);
