@@ -43,16 +43,12 @@ p {
   letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
-.span-faq-icon {
-  border: 1px solid rgba(250, 250, 250, 0.20);
-  padding: 8px;
-  border-radius: 50%;
- 
-}
+
 .faq-icon {
-  
-   
- 
+  fill: #fafafa;
+  stroke: #fafafa;
+  stroke-width: 4px;
+
 }
 .faq-item-p {
   font-family: var(--font-family);
