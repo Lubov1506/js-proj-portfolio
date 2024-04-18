@@ -1,3 +1,16 @@
+/* -------------Scroll anchor-------*/
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+/* -------------/Scroll anchor-------*/
+
+.header {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+}
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -29,8 +42,9 @@
   display: none;
 }
 
-.header-nav-list {
+.header-nav-list.is-hidden {
   /* display: none; */
+  opacity: 0;
 }
 .header-nav-item {
 }
