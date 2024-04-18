@@ -1,5 +1,6 @@
 .work-together-section {
-  padding: 32px 0;
+  padding-bottom: 32px;
+  padding-top: 64px;
 }
 .work-together-avatar {
   display: inline-block;
@@ -132,9 +133,13 @@
   transition: border-color 200ms ease-in-out;
 }
 
+.work-together-contact:active {
+  border-color: var(--main-text);
+}
+
 @media screen and (min-width: 768px) {
   .work-together-section {
-    padding-top: 88px;
+    padding-top: 128px;
     padding-bottom: 169px;
   }
   .work-together-avatar {
@@ -180,7 +185,7 @@
 
 @media screen and (min-width: 1440px) {
   .work-together-section {
-    padding-top: 80px;
+    padding-top: 162px;
   }
   .work-together-avatar {
     display: inline-block;
@@ -273,6 +278,11 @@
   background-color: transparent;
   border: none;
 }
+
+.work-together-modal-svg {
+  stroke: white;
+}
+
 .work-together-modal-title {
   font-family: var(--font-family);
   font-weight: 600;

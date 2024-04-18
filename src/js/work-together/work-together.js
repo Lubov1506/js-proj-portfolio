@@ -10,51 +10,73 @@ const message = document.querySelector('.email-text');
 const backdrop = document.querySelector('.backdrop');
 const modalWindow = document.querySelector('.work-together-modal-window');
 const closeModalBtn = document.querySelector('.work-together-modal-btn');
-workTogetherForm.addEventListener('submit', submitHandler);
-console.log(modalWindow);
+
 const onCloseBtn = event => {
   backdrop.classList.remove('is-open');
   modalWindow.classList.remove('window-is-open');
-  message.classList.add('correct-text');
-  emailInput.classList.add('correct-input');
-  message.textContent = 'Succes!';
-  setTimeout(() => {
-    message.classList.remove('correct-text');
-    emailInput.classList.remove('correct-input');
-  }, 2000);
   closeModalBtn.removeEventListener('click', onCloseBtn);
 };
 
-function submitHandler(event) {
+const submitHandler = event => {
   event.preventDefault();
-  if (commentInput.value.trim() === '') {
-    iziToast.show({
-      title: 'Error',
-      message: 'Wrong value in comment.',
-      backgroundColor: 'tomato',
-      theme: 'dark',
-      color: 'red',
-      position: 'bottomRight',
-    });
-    return;
-  }
   axios
     .post('/requests', {
       email: emailInput.value,
       comment: commentInput.value,
     })
-    .then(() => {
+    .then(data => {
       backdrop.classList.add('is-open');
       modalWindow.classList.add('window-is-open');
       closeModalBtn.addEventListener('click', onCloseBtn);
     })
-    .catch(() => {
-      message.classList.add('incorrect-text');
-      message.textContent = 'Invalid email, try again';
-      emailInput.classList.add('incorrect-input');
-      setTimeout(() => {
-        message.classList.remove('incorrect-text');
-        emailInput.classList.remove('incorrect-input');
-      }, 2000);
+    .catch(error => {
+      iziToast.show({
+        title: 'Error',
+        message:
+          'Unexpected error happend during submiting your review, please try again later',
+        backgroundColor: '#ed3b44;',
+        theme: 'dark',
+        color: 'red',
+        position: 'bottomRight',
+      });
     });
-}
+};
+
+const emailValidation = mail => {
+  return (
+    mail.includes('@') &&
+    mail.indexOf('@') !== 0 &&
+    mail.includes('.') &&
+    mail.indexOf('@') === mail.lastIndexOf('@') &&
+    mail.lastIndexOf('.') > mail.lastIndexOf('@') &&
+    mail.indexOf('.') !== mail.length - 1 &&
+    mail.lastIndexOf('.') - mail.indexOf('@') > 1
+  );
+};
+const inputCheckHandler = event => {
+  const mail = emailInput.value;
+  if (mail === '') {
+    return;
+  }
+  if (emailValidation(mail)) {
+    message.classList.add('correct-text');
+    emailInput.classList.add('correct-input');
+    message.textContent = 'Succes!';
+    setTimeout(() => {
+      message.classList.remove('correct-text');
+      emailInput.classList.remove('correct-input');
+    }, 1000);
+  } else {
+    message.classList.add('incorrect-text');
+    message.textContent = 'Invalid email, try again';
+    emailInput.classList.add('incorrect-input');
+    setTimeout(() => {
+      message.classList.remove('incorrect-text');
+      emailInput.classList.remove('incorrect-input');
+    }, 1000);
+  }
+};
+
+workTogetherForm.addEventListener('submit', submitHandler);
+
+emailInput.addEventListener('blur', inputCheckHandler);
