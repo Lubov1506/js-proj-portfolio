@@ -47,13 +47,13 @@ margin-bottom: 16px;
 
 
 .about-text {
-  font-family: "Inter Tight", sans-serif;
+  font-family: var(--font-family);
 font-weight: 500;
 font-size: 24px;
 line-height: 1.16667;
 letter-spacing: -0.03em;
 text-transform: uppercase;
-color: #fafafa;
+color: var(--main-text);
 padding: 32px;
 }
 
@@ -117,7 +117,7 @@ min-height: 700px;
         }}
       
 .my-information-title {
-  font-family: "Inter Tight", sans-serif;
+  font-family: var(--font-family);
 font-weight: 600;
 font-size: 16px;
 line-height: 1.5;
@@ -150,19 +150,19 @@ transition: transform 0.3s ease;e: #FAFAFA
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: #fafafa;
+  color:var(--main-text);
   padding-bottom: 32px;
 
 }
 
 .my-information-item-text{
   list-style-type: none;
-  font-family: "Inter Tight", sans-serif;
+  font-family: var(--font-family);
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: -0.02em;
-color: #fafafa;
+color: var(--main-text);
 padding-bottom: 10px;
 
 }
@@ -238,12 +238,12 @@ flex-direction: row;
   height: 130px;
     border-radius: 100%;
     border: 1px solid rgba(250, 250, 250, 0.2); 
-    font-family: "Inter Tight", sans-serif;
+    font-family: var(--font-family);
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: -0.02em;
-color: #fafafa;
+color: var(--main-text);
   }
   
   @media screen and (max-width: 767px) {
