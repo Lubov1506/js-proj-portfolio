@@ -4,7 +4,6 @@ p {
 }
 .faq-section{
   padding: 32px 16px;
-
 }
 .faq-h2 {
   padding: 0;
@@ -25,11 +24,6 @@ p {
   border-top: 1px solid rgba(250, 250, 250, 0.1);
 }
 
-@media (min-width: 1440px) {
-  .faq-list {
-    grid-template-columns: 50% 50%;
-  }
-}
 
 .faq-list-item {
   border-bottom: 1px solid rgba(250, 250, 250, 0.1);
@@ -44,7 +38,7 @@ p {
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: -0.02em;
- padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 .faq-burger{
   display: flex;
@@ -61,7 +55,7 @@ p {
   font-weight: 600;
   line-height: 1.5; /* 150% */
   letter-spacing: -0.02em;
-  margin-bottom: 20px;
+  padding: 20px 0;
 }
 
 .faq-icon-span{
@@ -71,5 +65,85 @@ p {
   border-radius: 100px;
   display: inline-block;
   padding: 10px;
-;
 }
+
+
+
+@media screen and (min-width: 768px){
+  .faq-section{
+    padding:47px 32px;
+  }
+  .faq-h2 {
+    padding: 0;
+    color: rgba(250, 250, 250, 0.4);
+    font-size: 20px;
+    
+  
+  }
+  .faq-list-item {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+    margin-bottom: 24px;
+  }
+  .faq-item-h4 {
+    color: #fafafa;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5; /* 150% */
+    letter-spacing: -0.02em;
+  }
+  .faq-item-p {
+    font-family: var(--font-family);
+    color: rgba(250, 250, 250, 0.60);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5; /* 150% */
+    letter-spacing: -0.02em;
+    padding-bottom: 32px;
+  }
+  .faq-burger{
+    display: flex;
+    justify-content: space-between;
+    gap: 90px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  
+    
+  }
+  
+}
+
+@media (min-width: 1440px) {
+  .faq-list {
+    grid-template-columns: 50% 50%;
+  }
+  
+  .faq-list-item {
+    border: none;
+    padding: bottom 32px;
+    margin-bottom: 0;
+    border-top:1px solid rgba(250, 250, 250, 0.1);
+  }
+  .faq-list-item:nth-child(odd) {
+    padding-right: 32px;
+    border-right: 1px solid rgba(250, 250, 250, 0.1)
+  }
+  .faq-list-item:nth-child(even) {
+    padding-left: 32px;
+  }
+  .faq-list-item:nth-child(6) {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+  }
+  
+ .faq-list-item:nth-child(5) {
+    border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+  }
+  .faq-burger{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  
+    
+  }
+  }
