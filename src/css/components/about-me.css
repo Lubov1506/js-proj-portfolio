@@ -134,7 +134,8 @@ padding: 10px;
 width: 40px;
 height: 40px;
 fill: currentColor;
-transition: transform 0.3s ease;e: #FAFAFA
+transition: transform 0.3s ease;
+
 }
 
 
@@ -267,7 +268,4 @@ color: var(--main-text);
     height: 200px;
     padding-top: 88px;
   }
-}
-.icon-svg-arrow-right{
-
 }
