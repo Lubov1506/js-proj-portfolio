@@ -132,6 +132,10 @@
   transition: border-color 200ms ease-in-out;
 }
 
+.work-together-contact:active {
+  border-color: var(--main-text);
+}
+
 @media screen and (min-width: 768px) {
   .work-together-section {
     padding-top: 88px;
@@ -175,6 +179,11 @@
   .work-together-contact {
     font-size: 16px;
     padding: 18px 32px;
+  }
+
+  .work-together-contact:focus,
+  .work-together-contact:hover {
+    border-color: var(--main-text);
   }
 }
 
