@@ -34,14 +34,9 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    transition: scale var();
 }
-.btn-close-mob-menu:hover,
-.btn-close-mob-menu:focus {
-    scale: 1.1
-}
-.icon-close-mob-menu {
-}
+
+
 .mobile-nav {
     margin-top: auto;
     margin-bottom: auto;
@@ -72,7 +67,7 @@
 .mobile-link:focus{
     background-color: #e0373f;
 }
-@media only screen and (min-width: 767.98px) {
+@media only screen and (min-width: 768px) {
     .mobile-menu-bg {
         display: none;
     }
