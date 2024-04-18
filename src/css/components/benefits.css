@@ -81,7 +81,7 @@ align-items: center;
 
 max-width: 187px;
 height: 55px;
-transition: borderColor 250ms ease-in;
+transition: border-color var(--transition-pattern);
 }
 
 .order-project-link:active {
