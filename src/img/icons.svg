@@ -27,5 +27,13 @@
     <symbol id="icon-arrow" viewBox="0 0 20 20" fill="none">
       <path d="m15 7.5-5 5-5-5" stroke="#FAFAFA" stroke-width="2"/>
     </symbol>
+    <symbol id="icon-arrows-right" viewBox="0 0 32 32">
+      <path stroke-width="2" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="round" d="M5.333 16h21.333"></path>
+      <path stroke-width="2" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="round" d="M18.667 8l8 8-8 8"></path>
+    </symbol>
+    <symbol id="icon-arrows-left" viewBox="0 0 32 32">
+      <path stroke-width="2" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="round" d="M26.667 16h-21.333"></path>
+      <path stroke-width="2" stroke-miterlimit="4" stroke-linecap="round" stroke-linejoin="round" d="M13.333 24l-8-8 8-8"></path>
+    </symbol>
   </defs>
 </svg>

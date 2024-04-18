@@ -1,4 +1,132 @@
-/* щоб не сварилась збірка)) */
-p{
-  padding: 0;
+.projects-section {
+  padding-bottom: 32px;
+  padding-top: 32px;
+}
+.projects-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+}
+.projects-wrapper {
+}
+.projects-light-part {
+  background: #fafafa;
+  border-radius: 24px 24px 0 0;
+  margin-top: 32px;
+}
+.projects-content-list {
+  padding: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.projects-content-list li {
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  border-radius: 60px;
+  padding: 13px 18px;
+  color: #1c1d20;
+}
+
+.projects-description {
+  /* width: 279px; */
+  padding: 0 32px;
+  margin-top: 96px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 117%;
+  letter-spacing: -0.72px;
+  color: #1c1d20;
+}
+
+@media only screen and (min-width: 768px) {
+  .projects-description {
+    /* padding: 0 64px 0 148px; */
+    padding-left: 64px;
+    padding-right: 148px;
+    margin-top: 164px;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 100%;
+    letter-spacing: -1.32px;
+    color: #1c1d20;
+  }
+}
+
+/* .projects-link {
+  display: block;
+  margin: 32px;
+  overflow: hidden;
+
+  cursor: pointer;
+  border-radius: 60px;
+  padding: 13px 32px;
+  width: 141px;
+  background-color: #ed3b44;
+  color: #fafafa;
+} */
+.projects-link {
+  display: inline-flex;
+  align-items: center;
+  margin: 32px;
+  padding: 13px 32px;
+  border-radius: 60px;
+  background-color: #ed3b44;
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.projects-link-wrapper {
+  padding-bottom: 32px;
+}
+
+.projects-btn svg {
+  border-radius: 50%;
+  gap: 12px;
+}
+
+.projects-dark-part {
+  background-color: #242527;
+  border-radius: 0 0 24px 24px;
+}
+
+.project-img-wrapper picture {
+  width: 311px;
+  height: 195px;
+}
+.project-img {
+  padding: 100px 16px;
+}
+
+.projects-arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+.projects-btn_arrow {
+  border-radius: 50%;
+  background-color: transparent;
+
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-radius: 60px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-arrow-icon {
+  stroke: #fafafa;
+  fill: none;
+}
+.js-btn_arrow-left {
+}
+.js-btn_arrow-right {
 }
