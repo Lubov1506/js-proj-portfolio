@@ -1,4 +1,60 @@
 /* щоб не сварилась збірка)) */
-p{
+p {
   padding: 0;
+}
+.faq-section{
+  padding: 0 16px;
+
+}
+.faq-h2 {
+  padding: 0;
+  color: rgba(250, 250, 250, 0.4);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+
+}
+.faq-list {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.faq-list .faq-list-item:first-child {
+  border-top: 1px solid rgba(250, 250, 250, 0.1);
+}
+
+@media (min-width: 1440px) {
+  .faq-list {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.faq-list-item {
+  border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+  margin-bottom: 20px;
+}
+.faq-item-h4 {
+  color: #fafafa;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5; /* 150% */
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.faq-icon {
+  fill: #fafafa;
+  stroke: #fafafa;
+  stroke-width: 4px;
+
+}
+.faq-item-p {
+  font-family: var(--font-family);
+  color: rgba(250, 250, 250, 0.60);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: -0.02em;
 }
