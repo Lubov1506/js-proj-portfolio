@@ -1,3 +1,6 @@
+.wrap-hero {
+  padding-bottom: 32px;
+}
 .hero-container {
   position: relative;
   display: flex;
@@ -34,6 +37,9 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .wrap-hero {
+    padding-bottom: 48px;
+  }
   .hero-container {
     min-height: 900px;
     background-position: left;
@@ -72,6 +78,7 @@
 .hero-ccontacts-wrap {
   margin-top: 212px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: end;
   gap: 4px;
 }
