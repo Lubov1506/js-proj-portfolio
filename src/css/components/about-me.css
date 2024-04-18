@@ -184,11 +184,11 @@ height: 40px;
 .my-information-item.active .icon-svg {
   transform: rotate(180deg);
 }
-
+/* 
 .my-information-content {
   overflow: hidden;
   display: none;
-}
+} */
 
 @media screen and (min-width: 1439px) {
   .my-information-content {
