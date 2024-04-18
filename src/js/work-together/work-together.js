@@ -10,8 +10,7 @@ const message = document.querySelector('.email-text');
 const backdrop = document.querySelector('.backdrop');
 const modalWindow = document.querySelector('.work-together-modal-window');
 const closeModalBtn = document.querySelector('.work-together-modal-btn');
-workTogetherForm.addEventListener('submit', submitHandler);
-console.log(modalWindow);
+
 const onCloseBtn = event => {
   backdrop.classList.remove('is-open');
   modalWindow.classList.remove('window-is-open');
@@ -25,7 +24,7 @@ const onCloseBtn = event => {
   closeModalBtn.removeEventListener('click', onCloseBtn);
 };
 
-function submitHandler(event) {
+const submitHandler = event => {
   event.preventDefault();
   if (commentInput.value.trim() === '') {
     iziToast.show({
@@ -57,4 +56,7 @@ function submitHandler(event) {
         emailInput.classList.remove('incorrect-input');
       }, 2000);
     });
-}
+};
+
+workTogetherForm.addEventListener('submit', submitHandler);
+console.log(modalWindow);
