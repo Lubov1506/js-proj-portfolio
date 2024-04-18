@@ -6,10 +6,12 @@ const mobileLink = document.querySelector('.mobile-link')
 
 const showMobMenu = () => {
     mobMenuElem.classList.add('is-open')
+    document.body.classList.add('menu-open')
 }
 
 const closeMobMenu = () => {
     mobMenuElem.classList.remove('is-open')
+    document.body.classList.remove('menu-open');
 }
 
 const moveToAnchor = (event) => {
@@ -23,6 +25,7 @@ const moveToAnchor = (event) => {
             behavior: 'smooth'
         });
         mobMenuElem.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
     }
 }
 
