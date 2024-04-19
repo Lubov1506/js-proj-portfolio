@@ -17,47 +17,48 @@ p {
   padding: 0;
 }
 
-/* .h2-covers {
-  visibility: hidden;
-} */
 .covers-list {
   justify-content: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  column-gap: 32px;
+  overflow: hidden;
+  height: 300px;
+  
+}
+.img-cover {
+  width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  object-fit: cover;
+  transform: rotate(20deg);
 }
+
 .cover-item {
-  height: 163px;
-  width: 283px;
+  width: 100%;
+  height: 100%;
+  animation: move 10s linear infinite;
 }
-.covers-list .cover-item:nth-child(1) {
-  grid-column: 2;
+
+@keyframes move{
+  0% {
+    transform: translateY(-10%);
+  }
+
+  100% {
+    transform: translateY(-180%);
+  
+  }
 }
-.covers-list .cover-item:nth-child(3) {
-  grid-column: 1;
-}
-.covers-list .cover-item:nth-child(6) {
-  grid-column: 1;
-}
-.covers-list .cover-item:nth-child(8) {
-  grid-column: 3;
-}
-.covers-list .cover-item:nth-child(8) {
-  grid-column: 1;
-}
-.covers-list .cover-item:nth-child(10) {
-  grid-column: 1;
-}
+
+
+
+
 @media screen and (min-width: 768px) {
   .section-covers .container {
     padding: 0;
   }
-.covers-wrap {
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
+
   .cover-item {
     height: 314px;
     width: 544px;
@@ -70,51 +71,15 @@ p {
 
   .covers-list {
     grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    height: 900px;
   }
-  .covers-list .cover-item:nth-child(1) {
-    grid-column: 2;
-  }
-  .covers-list .cover-item:nth-child(4) {
-    grid-column: 2;
-  }
-  .covers-list .cover-item:nth-child(6) {
-    grid-column: 1;
-  }
-  .covers-list .cover-item:nth-child(8) {
-    grid-column: 3;
-  }
-
-  .covers-list .cover-item:nth-child(9) {
-    grid-column: 1;
-  }
-  .covers-list .cover-item:nth-child(10) {
-    grid-column: 2;
-  }
+  
 }
 @media screen and (min-width: 1440px) {
-  .covers-wrap {
-  padding-top: 82px;
-  padding-bottom: 82px;
-}
+
   .covers-list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
-  .covers-list .cover-item:nth-child(1) {
-    grid-column: 2;
-  }
-  .covers-list .cover-item:nth-child(3) {
-    grid-column: 1;
-  }
-  .covers-list .cover-item:nth-child(6) {
-    grid-column: 1;
-  }
-  .covers-list .cover-item:nth-child(8) {
-    grid-column: 3;
-  }
-  .covers-list .cover-item:nth-child(9) {
-    grid-column: 1;
-  }
-  .covers-list .cover-item:nth-child(10) {
-    grid-column: 2;
-  }
+  
 }
