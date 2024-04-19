@@ -331,6 +331,8 @@
 /* #region scroll-up */
 
 .scroll-up-btn {
+  padding: 5px;
+  z-index: 1001;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,12 +342,15 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: rgba(237, 59, 68, 0.6);
+  background-color: rgba(237, 59, 68, 0.4);
   opacity: 0;
   visibility: hidden;
   transform: translateY(200%);
   transition: opacity var(--transition-pattern),
     visibility var(--transition-pattern), transform var(--transition-pattern);
+}
+.scroll-up-svg {
+  stroke: var(--main-text);
 }
 
 @media screen and (min-width: 768px) {
