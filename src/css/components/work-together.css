@@ -303,7 +303,3 @@
   color: rgba(250, 250, 250, 0.6);
 }
 /* #endregion modal window */
-
-.backdrop-opened {
-  visibility: unset;
-}

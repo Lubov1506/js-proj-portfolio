@@ -17,9 +17,9 @@ p {
   padding: 0;
 }
 
-.h2-covers {
+/* .h2-covers {
   visibility: hidden;
-}
+} */
 .covers-list {
   justify-content: center;
   display: grid;
