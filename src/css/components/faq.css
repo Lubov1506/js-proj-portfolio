@@ -1,4 +1,37 @@
 /* щоб не сварилась збірка)) */
+
+.acc-content{
+width: 100%;
+height: 0px;
+overflow: hidden;
+transition: height 500ms ease-out;
+
+}
+.is-open{
+  height:100%;
+  transition:height 500ms ease-out;
+  
+}
+.acc-trigger{
+  height: 40px;
+  width: 40px;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 100px;
+  display: inline-block;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
 p {
   padding: 0;
 }
