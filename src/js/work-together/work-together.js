@@ -19,12 +19,28 @@ class UserComent {
   }
 }
 
-const onCloseBtn = () => {
-  scrollUpBtn.classList.add('visible');
-  document.body.classList.remove('backdrop-opened');
-  backdrop.classList.remove('backdrop-is-open');
-  modalWindow.classList.remove('window-is-open');
-  closeModalBtn.removeEventListener('click', onCloseBtn);
+const onClose = event => {
+  if (
+    event.target.classList.contains('backdrop') ||
+    event.target.nodeName === 'svg'
+  ) {
+    scrollUpBtn.classList.add('visible');
+    document.body.classList.remove('backdrop-opened');
+    backdrop.classList.remove('backdrop-is-open');
+    modalWindow.classList.remove('window-is-open');
+    document.body.removeEventListener('click', onClose);
+  }
+};
+
+const onEscClose = event => {
+  console.log(event.key);
+  if (event.key === 'Escape') {
+    scrollUpBtn.classList.add('visible');
+    document.body.classList.remove('backdrop-opened');
+    backdrop.classList.remove('backdrop-is-open');
+    modalWindow.classList.remove('window-is-open');
+    window.removeEventListener('click', onEscClose);
+  }
 };
 
 const submitHandler = async event => {
@@ -39,7 +55,8 @@ const submitHandler = async event => {
     document.body.classList.add('backdrop-opened');
     backdrop.classList.add('backdrop-is-open');
     modalWindow.classList.add('window-is-open');
-    closeModalBtn.addEventListener('click', onCloseBtn);
+    document.body.addEventListener('click', onClose);
+    window.addEventListener('keydown', onEscClose);
     document.body.classList.remove('cursor-wait');
   } catch (error) {
     console.log(error);
