@@ -298,19 +298,9 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   z-index: 10; 
 }
 
-.icon-svg-arrow-right {
-<<<<<<< Updated upstream
-  fill: red /* колір іконки */
-=======
-  stroke-width: 2px;
-  stroke: #3b3b3b;
-  width: 28px;
-  height: 28px;
-  fill: none;
-
-  
->>>>>>> Stashed changes
-}
+ .icon-svg-arrow-right {
+  fill: red;
+  stroke-width: 2px;}
 
 
 @media screen and (min-width: 768px) {
