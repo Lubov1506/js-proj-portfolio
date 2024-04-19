@@ -209,7 +209,7 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   border: none;
 }
 
-.programmer-language {
+.swiper.programmer-language {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -217,32 +217,32 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   margin-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
-  .programmer-language {
+  .swiper.programmer-language {
     margin-top: 64px;
     margin-bottom: 48px;
   }
 }
 
 @media screen and (min-width: 1439px) {
-  .programmer-language {
+  .swiper.programmer-language {
     margin-top: 96px;
     margin-bottom: 115px;
     padding-left: 32px;
     padding-right: 32px;
   }
 }
-
-.programmer-language-list {
+.swiper-wrapper.programmer-language-list {
   display: flex;
   flex-direction: row;
 }
 
-.programmer-language-list li:nth-child(1) {
+.swiper-wrapper.programmer-language-list .swiper-slide:first-child {
   background-color: #ed3b44;
 }
 
-.programmer-language-item {
-  display: inline-block;
+
+
+.swiper-slide.programmer-language-item {
   text-align: center;
   padding-top: 53px;
   width: 130px;
@@ -257,13 +257,13 @@ button#ac-trigger-btn.ac-trigger.custom::after{
 }
 
 @media screen and (max-width: 767px) {
-  .programmer-language-item:nth-child(n + 3) {
+  .swiper-slide.programmer-language-item:nth-child(n + 3) {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .programmer-language-item:nth-child(n + 4) {
+  .swiper-slide.programmer-language-item:nth-child(n + 4) {
     display: none;
     font-size: 20px;
     width: 200px;
@@ -272,7 +272,7 @@ button#ac-trigger-btn.ac-trigger.custom::after{
 }
 
 @media screen and (min-width: 768px) {
-  .programmer-language-item {
+  .swiper-slide.programmer-language-item {
     font-size: 20px;
     display: list-item;
     width: 200px;
@@ -281,19 +281,31 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   }
 }
 
+.swiper-button-next:after{
+  display: none;
+
+}
+
+.swiper-button-next.custom {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+
+}
+
 .icon-svg-arrow-right {
   stroke-width: 2px;
   stroke: #3b3b3b;
   width: 28px;
   height: 28px;
   fill: none;
-  margin-top: 51px;
+  
 }
 
 @media screen and (min-width: 768px) {
-  .icon-svg-arrow-right {
+  .swiper-button-next.custom{
     width: 40px;
     height: 40px;
-    margin-top: 80px;
-  }
-}
+  }}
