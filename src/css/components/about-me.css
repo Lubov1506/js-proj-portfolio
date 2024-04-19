@@ -232,8 +232,10 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   }
 }
 .swiper-wrapper.programmer-language-list {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
+
+  width: 260px;
 }
 
 .swiper-wrapper.programmer-language-list .swiper-slide:first-child {
@@ -254,17 +256,19 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: var(--main-text);
+
+  align-self: start;
 }
 
 @media screen and (max-width: 767px) {
   .swiper-slide.programmer-language-item:nth-child(n + 3) {
-    display: none;
+    /* display: none; */
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .swiper-slide.programmer-language-item:nth-child(n + 4) {
-    display: none;
+    /* display: none; */
     font-size: 20px;
     width: 200px;
     height: 200px;
@@ -297,11 +301,11 @@ button#ac-trigger-btn.ac-trigger.custom::after{
 
 .icon-svg-arrow-right {
   stroke-width: 2px;
-  stroke: #3b3b3b;
+  stroke: white;
   width: 28px;
   height: 28px;
   fill: none;
-  
+  border: 2px solid white;
 }
 
 @media screen and (min-width: 768px) {
@@ -309,3 +313,4 @@ button#ac-trigger-btn.ac-trigger.custom::after{
     width: 40px;
     height: 40px;
   }}
+
