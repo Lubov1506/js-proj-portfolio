@@ -38,7 +38,7 @@
   box-shadow: none;
   border: none;
   border-bottom: solid 1px rgba(250, 250, 250, 0.5);
-  transition: border-color 200ms ease-in-out;
+  transition: border-color var(--transition-pattern);
   padding-bottom: 20px;
   margin-bottom: 32px;
   outline: none;
@@ -74,8 +74,8 @@
   position: absolute;
   bottom: -4px;
   transform: translateX(-100%);
-  transition: color 200ms ease-in-out, transform 200ms ease-in-out,
-    opacity 200ms ease-in-out;
+  transition: color var(--transition-pattern),
+    transform var(--transition-pattern), opacity var(--transition-pattern);
 }
 
 .correct-text {
@@ -104,7 +104,7 @@
   border-radius: 100%;
   background-color: var(--button-text);
   border: none;
-  transition: background-color 200ms ease-in-out;
+  transition: background-color var(--transition-pattern);
 }
 
 .work-together-button:active {
@@ -130,7 +130,7 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
   text-wrap: nowrap;
-  transition: border-color 200ms ease-in-out;
+  transition: border-color var(--transition-pattern);
 }
 
 .work-together-contact:active {
@@ -227,8 +227,8 @@
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--transition-pattern),
+    visibility var(--transition-pattern);
   background-color: var(--background);
 }
 
@@ -251,8 +251,8 @@
   background-color: var(--background);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 400ms ease-in-out, visibility 400ms ease-in-out,
-    transform 400ms ease-in-out;
+  transition: opacity var(--transition-pattern),
+    visibility var(--transition-pattern), transform var(--transition-pattern);
 }
 @media screen and (min-width: 768px) {
   .work-together-modal-window {
