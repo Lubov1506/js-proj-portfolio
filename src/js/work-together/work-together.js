@@ -10,7 +10,6 @@ const message = document.querySelector('.email-text');
 const backdrop = document.querySelector('.backdrop');
 const modalWindow = document.querySelector('.work-together-modal-window');
 const closeModalBtn = document.querySelector('.work-together-modal-btn');
-const scrollUpBtn = document.querySelector('.scroll-up-btn');
 
 class UserComent {
   constructor(mail, comment) {
