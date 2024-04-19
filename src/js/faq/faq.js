@@ -2,7 +2,12 @@ import Accordion from 'accordion-js';
 
 const accorContainer = document.querySelector('.accordion-container.faq');
 
-new Accordion(accorContainer, {
-    openOnInit: [0]
+const faqacc= new Accordion(accorContainer, {
+    openOnInit: [0],
+    duration: 300,
 })
 
+
+
+
+console.log(faqacc);
