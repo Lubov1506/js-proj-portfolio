@@ -1,7 +1,7 @@
 // import Swiper JS
 import Swiper from 'swiper';
 // import Swiper styles
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,21 +12,24 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
   direction: 'horizontal',
   loop: true,
-  modules: [ Navigation, Pagination ],
+  modules: [ Navigation ],
 
   breakpoints: {
-    320: {
+    375: {
       slidesPerView: 2,
+      width: 260
     },
     768: {
       slidesPerView: 3,
+      width: 600
     },
     1440: {
       slidesPerView: 6,
+      width: 1200
     }
   },
   navigation: {
-    nextEl: 'swiper-button-next custom',
+    nextEl: '.swiper-button-next custom',
   },
 //   on: {
 //     slideChange: function ()  {
