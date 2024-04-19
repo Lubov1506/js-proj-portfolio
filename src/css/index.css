@@ -1,6 +1,12 @@
 @import url('./base/common.css');
 @import url('./base/container.css');
 
+@import url('accordion-js/dist/accordion.min.css');
+@import url('swiper/css');
+@import url('swiper/css/navigation');
+@import url('../../node_modules/swiper/swiper-bundle.css');
+@import url('izitoast/dist/css/iziToast.min.css');
+
 @import url('./components/header.css');
 @import url('./components/mobile-menu.css');
 @import url('./components/hero.css');

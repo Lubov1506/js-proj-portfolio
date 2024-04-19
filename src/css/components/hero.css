@@ -8,6 +8,7 @@
   justify-content: end;
 
   background-position: center;
+  background-position: 0px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('../../img/hero/bgc/mob@1x.png');
@@ -26,7 +27,7 @@
   .hero-container {
     min-height: 1024px;
     background-size: 728px 100%;
-    background-position: -187px;
+    background-position: -212px;
     background-image: url('../../img/hero/bgc/desk@1x.png');
   }
 }
