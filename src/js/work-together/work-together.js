@@ -10,6 +10,15 @@ const message = document.querySelector('.email-text');
 const backdrop = document.querySelector('.backdrop');
 const modalWindow = document.querySelector('.work-together-modal-window');
 const closeModalBtn = document.querySelector('.work-together-modal-btn');
+const scrollUpBtn = document.querySelector('.scroll-up-btn');
+
+class UserComent {
+  constructor(mail, comment) {
+    this.email = mail;
+    this.comment = comment;
+    this.id = Date.now();
+  }
+}
 
 const onCloseBtn = event => {
   document.body.classList.remove('backdrop-opened');
@@ -20,13 +29,12 @@ const onCloseBtn = event => {
 
 const submitHandler = event => {
   event.preventDefault();
-  event.target.reset();
+  const mail = emailInput.value;
+  const comment = commentInput.value;
   axios
-    .post('/requests', {
-      email: emailInput.value,
-      comment: commentInput.value,
-    })
+    .post('/requests', new UserComent(mail, comment))
     .then(data => {
+      event.target.reset();
       document.body.classList.add('backdrop-opened');
       backdrop.classList.add('is-open');
       modalWindow.classList.add('window-is-open');
