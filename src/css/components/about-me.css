@@ -299,7 +299,17 @@ button#ac-trigger-btn.ac-trigger.custom::after{
 }
 
 .icon-svg-arrow-right {
+<<<<<<< Updated upstream
   fill: red /* колір іконки */
+=======
+  stroke-width: 2px;
+  stroke: #3b3b3b;
+  width: 28px;
+  height: 28px;
+  fill: none;
+
+  
+>>>>>>> Stashed changes
 }
 
 
