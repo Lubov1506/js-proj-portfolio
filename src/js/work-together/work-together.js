@@ -1,6 +1,5 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api-docs';
 const workTogetherForm = document.querySelector('.work-together-form');
@@ -10,39 +9,50 @@ const message = document.querySelector('.email-text');
 const backdrop = document.querySelector('.backdrop');
 const modalWindow = document.querySelector('.work-together-modal-window');
 const closeModalBtn = document.querySelector('.work-together-modal-btn');
+const scrollUpBtn = document.querySelector('.scroll-up-btn');
+
+class UserComent {
+  constructor(mail, comment) {
+    this.email = mail;
+    this.comment = comment;
+    this.id = Date.now();
+  }
+}
 
 const onCloseBtn = event => {
+  scrollUpBtn.classList.add('visible');
   document.body.classList.remove('backdrop-opened');
-  backdrop.classList.remove('is-open');
+  backdrop.classList.remove('backdrop-is-open');
   modalWindow.classList.remove('window-is-open');
   closeModalBtn.removeEventListener('click', onCloseBtn);
 };
 
-const submitHandler = event => {
-  event.preventDefault();
-  event.target.reset();
-  axios
-    .post('/requests', {
-      email: emailInput.value,
-      comment: commentInput.value,
-    })
-    .then(data => {
-      document.body.classList.add('backdrop-opened');
-      backdrop.classList.add('is-open');
-      modalWindow.classList.add('window-is-open');
-      closeModalBtn.addEventListener('click', onCloseBtn);
-    })
-    .catch(error => {
-      iziToast.show({
-        title: 'Error',
-        message:
-          'Unexpected error happend during submiting your review, please try again later',
-        backgroundColor: '#ed3b44;',
-        theme: 'dark',
-        color: 'red',
-        position: 'bottomRight',
-      });
+const submitHandler = async event => {
+  try {
+    event.preventDefault();
+    document.body.classList.add('cursor-wait');
+    const mail = emailInput.value;
+    const comment = commentInput.value;
+    scrollUpBtn.classList.remove('visible');
+    await axios.post('/requests', new UserComent(mail, comment));
+    event.target.reset();
+    document.body.classList.add('backdrop-opened');
+    backdrop.classList.add('backdrop-is-open');
+    modalWindow.classList.add('window-is-open');
+    closeModalBtn.addEventListener('click', onCloseBtn);
+    document.body.classList.remove('cursor-wait');
+  } catch (error) {
+    console.log(error);
+    iziToast.show({
+      title: 'Error',
+      message:
+        'Unexpected error happend during submiting your review, please try again later',
+      backgroundColor: '#ed3b44;',
+      theme: 'dark',
+      color: 'red',
+      position: 'bottomRight',
     });
+  }
 };
 
 const emailValidation = mail => {
@@ -61,7 +71,7 @@ const inputCheckHandler = event => {
     setTimeout(() => {
       message.classList.remove('correct-text');
       emailInput.classList.remove('correct-input');
-    }, 1000);
+    }, 1500);
   } else {
     message.classList.add('incorrect-text');
     message.textContent = 'Invalid email, try again';
@@ -69,9 +79,30 @@ const inputCheckHandler = event => {
     setTimeout(() => {
       message.classList.remove('incorrect-text');
       emailInput.classList.remove('incorrect-input');
-    }, 1000);
+    }, 1500);
   }
 };
+
+const onScroll = event => {
+  if (window.scrollY > 200 && !scrollUpBtn.classList.contains('visible')) {
+    scrollUpBtn.classList.add('visible');
+  } else if (
+    window.scrollY <= 200 &&
+    scrollUpBtn.classList.contains('visible')
+  ) {
+    scrollUpBtn.classList.remove('visible');
+  }
+};
+
+if (
+  window.scrollY > 200 &&
+  !scrollUpBtn.classList.contains('visible') &&
+  !backdrop.classList.contains('backdrop-is-open')
+) {
+  scrollUpBtn.classList.add('visible');
+}
+
+document.addEventListener('scroll', onScroll);
 
 workTogetherForm.addEventListener('submit', submitHandler);
 
