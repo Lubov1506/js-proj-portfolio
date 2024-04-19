@@ -7,7 +7,7 @@ p {
   padding-bottom: 32px;
 }
 .section-covers {
-  background: url('../img/covers/background.png');
+  background-image: url('../../img/covers/background.png');
   background-size: cover;
   backdrop-filter: blur(15px);
   background-color: (217, 217, 217, 0.04);
