@@ -3,20 +3,13 @@ import axios from 'axios';
 import iziToast from 'izitoast';
 import { createReviewsList } from './render-functions';
 import 'swiper/css/bundle';
+
 const urlapi = 'https://portfolio-js.b.goit.study/api/reviews';
 let reviewsswiper;
-
 const reviewlist = document.querySelector('.reviews-list');
 const swiperContainer = document.querySelector('.swiper-reviews');
 const prevbtnEl = document.querySelector('.js-btn-prev');
-4;
-console.dir(prevbtnEl);
 const nextbtnEl = document.querySelector('.js-btn-next');
-console.dir(nextbtnEl);
-const prevsvgbtn = document.querySelectorAll('.js-icon-prev');
-console.dir(prevsvgbtn);
-const nextsvgbtn = document.querySelectorAll('.js-icon-next');
-console.dir(nextsvgbtn);
 let theEnd = false;
 
 const fetchReviews = async url => {
