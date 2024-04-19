@@ -209,42 +209,48 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   border: none;
 }
 
-.swiper.programmer-language {
+
+.swiper.about {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 32px;
   margin-bottom: 32px;
+  max-width: 1312px;
+
 }
 @media screen and (min-width: 768px) {
-  .swiper.programmer-language {
+  .swiper.about {
     margin-top: 64px;
     margin-bottom: 48px;
   }
 }
 
 @media screen and (min-width: 1439px) {
-  .swiper.programmer-language {
+  .swiper.about {
     margin-top: 96px;
     margin-bottom: 115px;
     padding-left: 32px;
     padding-right: 32px;
   }
 }
-.swiper-wrapper.programmer-language-list {
-  /* display: flex;
-  flex-direction: row; */
 
-  width: 260px;
+.swiper-wrapper.programmer-list {
+  min-width: 130px; 
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+ 
 }
 
-.swiper-wrapper.programmer-language-list .swiper-slide:first-child {
+.swiper-wrapper.programmer-list .swiper-slide:first-child {
   background-color: #ed3b44;
 }
 
 
-
-.swiper-slide.programmer-language-item {
+.swiper-slide.programmer-item {
+  display: flex;
   text-align: center;
   padding-top: 53px;
   width: 130px;
@@ -256,27 +262,21 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: var(--main-text);
-
   align-self: start;
+  justify-content: center;
 }
 
-@media screen and (max-width: 767px) {
-  .swiper-slide.programmer-language-item:nth-child(n + 3) {
-    /* display: none; */
-  }
-}
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .swiper-slide.programmer-language-item:nth-child(n + 4) {
-    /* display: none; */
+  .swiper-slide.programmer-item:nth-child(n + 4) {
     font-size: 20px;
     width: 200px;
     height: 200px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .swiper-slide.programmer-language-item {
+ @media screen and (min-width: 768px) {
+  .swiper-slide.programmer-item {
     font-size: 20px;
     display: list-item;
     width: 200px;
@@ -285,32 +285,37 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   }
 }
 
-.swiper-button-next:after{
-  display: none;
 
-}
-
-.swiper-button-next.custom {
+.swiper-button-next-about {
+  right: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
   background-color: transparent;
   border: none;
   cursor: pointer;
-  width: 28px;
-  height: 28px;
-
+  width: 28px; 
+  height: 28px; 
+  z-index: 10; 
 }
 
 .icon-svg-arrow-right {
-  stroke-width: 2px;
-  stroke: white;
-  width: 28px;
-  height: 28px;
-  fill: none;
-  border: 2px solid white;
+  fill: red /* колір іконки */
 }
 
+
 @media screen and (min-width: 768px) {
-  .swiper-button-next.custom{
+  .swiper-button-next-about {
     width: 40px;
     height: 40px;
   }}
+
+.icon-svg-arrow-right {
+  stroke: #3b3b3b;
+  fill: none;
+  display: block;
+
+
+}
+
+
 
