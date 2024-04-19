@@ -4,9 +4,9 @@
 @import url('accordion-js/dist/accordion.min.css');
 @import url('swiper/css');
 @import url('swiper/css/navigation');
+@import url('swiper/css');
 @import url('../../node_modules/swiper/swiper-bundle.min.css');
 @import url('izitoast/dist/css/iziToast.min.css');
-
 
 @import url('./components/header.css');
 @import url('./components/mobile-menu.css');
