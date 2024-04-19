@@ -1,5 +1,6 @@
 import Swiper from 'swiper/bundle';
 import axios from 'axios';
+import iziToast from 'izitoast';
 import { createReviewsList } from './render-functions';
 import 'swiper/css/bundle';
 const urlapi = 'https://portfolio-js.b.goit.study/api/reviews';
@@ -23,13 +24,29 @@ const fetchReviews = async url => {
     const response = await axios.get(url);
     return response.data;
   } catch (error) {
-    console.error('Помилка завантаження даних:', error);
+    reviewlist.innerHTML =
+      '<li class="not-found-item"><p class="not-found-message">Not found</p></li>';
+
+    iziToast.show({
+      title: 'Помилка завантаження!',
+      message: 'Повторіть спробу пізніше.',
+      messageSize: 'large',
+      backgroundColor: '#242527',
+      theme: 'dark',
+      position: 'center',
+      timeout: 4000,
+      progressBar: false,
+      progressBarColor: '#3b3b3b',
+      onOpening: () => {
+        nextbtnEl.style.display = 'none';
+        prevbtnEl.style.display = 'none';
+      },
+    });
 
     return {};
   }
 };
 fetchReviews(urlapi).then(reviews => {
-  console.log('Отримані відгуки:', reviews);
   reviewlist.innerHTML = createReviewsList(reviews);
 
   reviewsswiper = new Swiper('.swiper-reviews', {
