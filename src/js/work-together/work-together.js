@@ -19,7 +19,7 @@ class UserComent {
   }
 }
 
-const onCloseBtn = event => {
+const onCloseBtn = () => {
   scrollUpBtn.classList.add('visible');
   document.body.classList.remove('backdrop-opened');
   backdrop.classList.remove('backdrop-is-open');
@@ -59,7 +59,7 @@ const emailValidation = mail => {
   const validRegex = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
   return mail.match(validRegex);
 };
-const inputCheckHandler = event => {
+const inputCheckHandler = () => {
   const mail = emailInput.value;
   if (mail === '') {
     return;
@@ -83,7 +83,7 @@ const inputCheckHandler = event => {
   }
 };
 
-const onScroll = event => {
+const onScroll = () => {
   if (window.scrollY > 200 && !scrollUpBtn.classList.contains('visible')) {
     scrollUpBtn.classList.add('visible');
   } else if (
