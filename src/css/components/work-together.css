@@ -359,8 +359,9 @@
 
 @media screen and (min-width: 768px) {
   .scroll-up-btn {
-    width: 80px;
-    height: 80px;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
     bottom: 30px;
     right: 30px;
   }
@@ -368,8 +369,9 @@
 
 @media screen and (min-width: 1440px) {
   .scroll-up-btn {
-    width: 100px;
-    height: 100px;
+    padding: 15px;
+    width: 90px;
+    height: 90px;
   }
 }
 
