@@ -241,18 +241,9 @@ button#ac-trigger-btn.ac-trigger.custom {
 }
 button#ac-trigger-btn.ac-trigger.custom::after{
   display: block;
- 
 }
 .ac-trigger {
   border: none;
-}
-.icon-svg {
-}
-.ac-panel {
-}
-.my-information-text {
-}
-.my-information-item-text {
 }
 
 .programmer-language {
