@@ -232,6 +232,8 @@ button#ac-trigger-btn.ac-trigger.custom::after{
     margin-bottom: 115px;
     padding-left: 32px;
     padding-right: 32px;
+    display: flex;
+    justify-content: flex-start;
   }
 }
 
@@ -240,6 +242,7 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   display: flex;
   flex-direction: row;
   text-align: center;
+  position: relative;
  
 }
 
@@ -266,13 +269,6 @@ button#ac-trigger-btn.ac-trigger.custom::after{
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .swiper-slide.programmer-item:nth-child(n + 4) {
-    font-size: 20px;
-    width: 200px;
-    height: 200px;
-  }
-}
 
  @media screen and (min-width: 768px) {
   .swiper-slide.programmer-item {
@@ -286,37 +282,43 @@ button#ac-trigger-btn.ac-trigger.custom::after{
 
 
 .swiper-button-next-about {
-  right: 10px; 
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
   border: none;
   cursor: pointer;
   width: 28px; 
   height: 28px; 
-  z-index: 10; 
-}
-
-.icon-svg-arrow-right {
-  fill: red; /* колір іконки */
+  stroke: #3b3b3b;
+  fill: none;
   stroke-width: 2px;
-  
+  display: block;
+    position: absolute;
+    right: 0; 
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    z-index: 10; 
 }
-
 
 @media screen and (min-width: 768px) {
   .swiper-button-next-about {
     width: 40px;
     height: 40px;
   }}
+  @media screen and (min-width: 1440px) {
+    .swiper-button-next-about {
+      width: 40px;
+      height: 40px;
+    }}
+  
+
 
 .icon-svg-arrow-right {
-  stroke: #3b3b3b;
-  fill: none;
-  display: block;
-
 
 }
+
+/* @media screen and (min-width: 768px) {
+  .icon-svg-arrow-right  {
+    margin-top: 80px;
+  }} */
 
 
 
