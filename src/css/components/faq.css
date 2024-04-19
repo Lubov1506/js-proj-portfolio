@@ -1,16 +1,20 @@
 /* щоб не сварилась збірка)) */
 
-.acc-content {
+/* .acc-content {
   width: 100%;
   height: 0px;
   overflow: hidden;
   transition: height 1s ease-out;
-}
-.is-open {
+} */
+/* .is-open {
   height: 100%;
   transition: height 1s ease-in;
+} */
+.accordion-container {
+  background-color: transparent;
+  color: inherit;
 }
-.acc-trigger {
+/* .acc-trigger {
   height: 40px;
   width: 40px;
   border: 1px solid rgba(250, 250, 250, 0.1);
@@ -19,7 +23,7 @@
   padding: 10px;
   background: transparent;
   cursor: pointer;
-}
+} */
 
 p {
   padding: 0;
@@ -59,13 +63,13 @@ p {
   letter-spacing: -0.02em;
   padding-bottom: 20px;
 }
-.faq-burger {
+/* .faq-burger {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   padding-top: 20px;
   padding-bottom: 30px;
-}
+} */
 .faq-item-h4 {
   color: #fafafa;
   font-size: 20px;
@@ -113,12 +117,12 @@ p {
     letter-spacing: -0.02em;
     padding-bottom: 32px;
   }
-  .faq-burger {
+  /* .faq-burger {
     display: flex;
     gap: 90px;
     padding-top: 20px;
     padding-bottom: 30px;
-  }
+  } */
 }
 
 @media (min-width: 1440px) {
@@ -146,10 +150,38 @@ p {
   .faq-list-item:nth-child(5) {
     border-bottom: 1px solid rgba(250, 250, 250, 0.1);
   }
-  .faq-burger {
+  /* .faq-burger {
     display: flex;
     gap: 40px;
     padding-top: 20px;
     padding-bottom: 30px;
-  }
+  } */
+}
+.accordion-container.faq{
+  display: flex;
+  flex-wrap: wrap;
+}
+.accordion-container.faq > li{
+  width: 50%;
+}
+.ac.faq-item {
+  color: var(--main-text);
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  background-color: var(--background);
+
+}
+
+p.ac-text{
+  color: var(--main-text);
+}
+.ac .ac-trigger{
+  color: var(--main-text);
+
+}
+.ac .ac-trigger:focus {
+  color: var(--main-text);
+}
+.ac .ac-panel .ac-text {
+color: rgba(250, 250, 250, 0.6);
 }
