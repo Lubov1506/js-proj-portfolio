@@ -27,7 +27,6 @@ const skillsswiper = new Swiper('.skills-swiper', {
 
       slidesPerGroup: 1,
       slidesOffsetAfter: 200,
-
     },
     768: {
       width: 600,
@@ -35,14 +34,12 @@ const skillsswiper = new Swiper('.skills-swiper', {
       slidesPerView: 3,
       slidesPerGroup: 1,
       slidesOffsetAfter: 200,
-
     },
     1440: {
       width: 1200,
       slidesPerView: 6,
       slidesPerGroup: 1,
       slidesOffsetAfter: 200,
-
     },
   },
   on: {
