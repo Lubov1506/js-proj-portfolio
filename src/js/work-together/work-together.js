@@ -24,7 +24,6 @@ class UserComent {
 }
 
 const onClose = event => {
-  console.log(event.target);
   if (
     event.target.classList.contains('backdrop') ||
     event.target.nodeName === 'svg' ||
