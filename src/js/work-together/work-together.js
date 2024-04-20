@@ -9,7 +9,6 @@ const message = document.querySelector('.email-text');
 const backdrop = document.querySelector('.backdrop');
 const modalWindow = document.querySelector('.work-together-modal-window');
 const scrollUpBtn = document.querySelector('.scroll-up-btn');
-console.log(localStorage.email, localStorage.comment);
 if (
   localStorage.getItem('email') !== null &&
   localStorage.getItem('email') !== undefined
