@@ -177,7 +177,6 @@
   justify-content: center;
 }
 .ac-panel.info {
-
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -185,13 +184,13 @@
 }
 
 @media only screen and (min-width: 1440px) {
-   .ac-panel.info {
-  margin-left: auto;
-  width: 612px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
+  .ac-panel.info {
+    margin-left: auto;
+    width: 612px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
   }
 }
 button#ac-trigger-btn.ac-trigger.custom {
@@ -202,68 +201,90 @@ button#ac-trigger-btn.ac-trigger.custom {
   border: none;
   padding-right: 0;
 }
-button#ac-trigger-btn.ac-trigger.custom::after{
+button#ac-trigger-btn.ac-trigger.custom::after {
   display: none;
 }
 .ac-trigger {
   border: none;
 }
 
-
-.swiper.about {
+.skills {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   margin-top: 32px;
   margin-bottom: 32px;
-   margin-left: 0;
-
-
-
+  margin-left: 0;
+  margin-right: 0;
+  gap: 55;
+  padding: 0;
 }
+.skills-swiper-container {
+  width: 260px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.skills-swiper {
+  width: 100%;
+  height: 100%;
+}
+.skills-swiper.about {
+  width: auto;
+}
+
 @media screen and (min-width: 768px) {
-  .swiper.about {
-width: 704px;
-    margin-top: 64px;
-    margin-bottom: 48px;
+  .skills {
+    justify-content: space-between;
+    gap: 64;
+  }
+  .skills-swiper-container {
+    width: 600px;
   }
 }
 
 @media screen and (min-width: 1439px) {
-  .swiper.about {
-   width: 1312px;
-    margin-top: 96px;
-    margin-bottom: 115px;
-    display: flex;
-    justify-content: flex-start;
+  .skills {
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    margin-top: 48px;
+    justify-content: space-between;
+    padding: 0 32px;
+    gap: 72;
+  }
+  .skills-swiper-container {
+    width: 1200px;
   }
 }
 
 .swiper-wrapper.programmer-list {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  position: relative;
-width: 260px;
+  width: 260px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: start;
 }
 
 @media screen and (min-width: 768px) {
-  .swiper-wrapper.programmer-list{
+  .swiper-wrapper.programmer-list {
     width: 600px;
-
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .swiper-wrapper.programmer-list{
+  .swiper-wrapper.programmer-list {
     width: 1200px;
   }
-  }
+}
 
 .swiper-slide.programmer-item.active {
   background-color: #ed3b44;
 }
-
 
 .swiper-slide.programmer-item {
   display: flex;
@@ -282,9 +303,7 @@ width: 260px;
   justify-content: center;
 }
 
-
-
- @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .swiper-slide.programmer-item {
     font-size: 20px;
     display: list-item;
@@ -294,49 +313,45 @@ width: 260px;
   }
 }
 
-
 .swiper-button-next-about {
+  background-color: transparent;
   border: none;
   cursor: pointer;
   stroke: #3b3b3b;
   fill: none;
   stroke-width: 2px;
-  display: block;
-  margin-top: 51px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
   z-index: 15;
-  
 }
-
-@media screen and (min-width: 768px) {
-  .swiper-button-next-about {
-    margin-top: 80px;
-  }}
-  @media screen and (min-width: 1440px) {
-    .swiper-button-next-about {
- 
-  margin-left: 72px;
-    }}
-  
-
-
-
 
 .icon-svg-arrow-right {
   width: 28px;
   height: 28px;
+  border: none;
 }
 
 @media screen and (min-width: 768px) {
   .icon-svg-arrow-right {
     width: 40px;
     height: 40px;
-  }}
-  @media screen and (min-width: 1440px) {
-    .icon-svg-arrow-right{
-      width: 40px;
-      height: 40px;
-    }}
-
-
-
-
+  }
+}
+@media screen and (min-width: 1440px) {
+  .icon-svg-arrow-right {
+    width: 40px;
+    height: 40px;
+  }
+}
+.icon-svg-arrow-right:hover,
+.icon-svg-arrow-right:focus,
+.icon-svg-arrow-right:active {
+  stroke: #fafafa;
+  border: 0;
+}
+.swiper-button-next-about:hover,
+.swiper-button-next-about:focus,
+.swiper-button-next-about:active {
+  border: 0;
+}
