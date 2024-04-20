@@ -78,7 +78,7 @@ fetchReviews(urlapi).then(reviews => {
   });
 });
 
-swiperContainer.addEventListener('keydown', function (event) {
+swiperContainer.addEventListener('keydown', event => {
   if (event.keyCode === 9) {
     if (isInViewport(swiperContainer)) {
       event.preventDefault();
@@ -98,7 +98,7 @@ swiperContainer.addEventListener('keydown', function (event) {
     }
   }
 });
-function isInViewport(element) {
+export const isInViewport = element => {
   const rect = element.getBoundingClientRect();
   return (
     rect.top >= 0 &&
@@ -107,4 +107,4 @@ function isInViewport(element) {
       (window.innerHeight || document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
-}
+};
