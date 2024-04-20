@@ -222,7 +222,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
   margin-top: 32px;
@@ -233,10 +233,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
   padding: 0;
 }
 .skills-swiper-container {
-
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  width: 260px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -247,7 +244,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
   height: 100%;
 }
 .skills-swiper.about {
-  width: auto;
+  width: 260px;
 }
 
 @media screen and (min-width: 768px) {
