@@ -9,11 +9,20 @@ const message = document.querySelector('.email-text');
 const backdrop = document.querySelector('.backdrop');
 const modalWindow = document.querySelector('.work-together-modal-window');
 const scrollUpBtn = document.querySelector('.scroll-up-btn');
-const prevEmail = JSON.parse(localStorage.getItem('email'));
-const prevComment = JSON.parse(localStorage.getItem('comment'));
+console.log(localStorage.email, localStorage.comment);
+if (
+  localStorage.getItem('email') !== null &&
+  localStorage.getItem('email') !== undefined
+) {
+  emailInput.value = JSON.parse(localStorage.getItem('email')).trim();
+}
 
-emailInput.value = prevEmail;
-commentInput.value = prevComment;
+if (
+  localStorage.getItem('comment') !== null &&
+  localStorage.getItem('comment') !== undefined
+) {
+  commentInput.value = JSON.parse(localStorage.getItem('comment')).trim();
+}
 
 class UserComent {
   constructor(mail, comment) {
@@ -51,8 +60,8 @@ const submitHandler = async event => {
   try {
     event.preventDefault();
     document.body.classList.add('cursor-wait');
-    const mail = emailInput.value;
-    const comment = commentInput.value;
+    const mail = emailInput.value.trim();
+    const comment = commentInput.value.trim();
     scrollUpBtn.classList.remove('visible');
     await axios.post('/requests', new UserComent(mail, comment));
     event.target.reset();
@@ -83,6 +92,7 @@ const emailValidation = mail => {
   return mail.match(validRegex);
 };
 const inputCheckHandler = () => {
+  emailInput.value = emailInput.value.trim();
   const mail = emailInput.value;
   if (mail === '') {
     return;
