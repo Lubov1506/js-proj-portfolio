@@ -7,7 +7,6 @@ const skillsswiper = new Swiper('.skills-swiper', {
   loop: true,
   modules: [Navigation],
   keyboard: {
-    keyCodes: [9, 37, 39],
     enabled: true,
     onlyInViewport: false,
   },
@@ -52,6 +51,13 @@ const skillsswiper = new Swiper('.skills-swiper', {
         activeIndex === swiper.slides.length - 1 ? 0 : activeIndex + 1;
       swiper.slides[nextIndex].classList.remove('active');
       swiper.slides[activeIndex].classList.add('active');
+    },
+    keyPress: (swiper, keyCode) => {
+      switch (keyCode) {
+        case 9:
+          swiper.slidePrev();
+          break;
+      }
     },
   },
 });
