@@ -8,8 +8,12 @@ const commentInput = document.querySelector('#work-together-comment');
 const message = document.querySelector('.email-text');
 const backdrop = document.querySelector('.backdrop');
 const modalWindow = document.querySelector('.work-together-modal-window');
-const closeModalBtn = document.querySelector('.work-together-modal-btn');
 const scrollUpBtn = document.querySelector('.scroll-up-btn');
+const prevEmail = JSON.parse(localStorage.getItem('email'));
+const prevComment = JSON.parse(localStorage.getItem('comment'));
+
+emailInput.value = prevEmail;
+commentInput.value = prevComment;
 
 class UserComent {
   constructor(mail, comment) {
@@ -20,9 +24,11 @@ class UserComent {
 }
 
 const onClose = event => {
+  console.log(event.target);
   if (
     event.target.classList.contains('backdrop') ||
-    event.target.nodeName === 'svg'
+    event.target.nodeName === 'svg' ||
+    event.target.nodeName === 'BUTTON'
   ) {
     scrollUpBtn.classList.add('visible');
     document.body.classList.remove('backdrop-opened');
@@ -33,7 +39,6 @@ const onClose = event => {
 };
 
 const onEscClose = event => {
-  console.log(event.key);
   if (event.key === 'Escape') {
     scrollUpBtn.classList.add('visible');
     document.body.classList.remove('backdrop-opened');
@@ -58,6 +63,8 @@ const submitHandler = async event => {
     document.body.addEventListener('click', onClose);
     window.addEventListener('keydown', onEscClose);
     document.body.classList.remove('cursor-wait');
+    localStorage.removeItem('email');
+    localStorage.removeItem('comment');
   } catch (error) {
     console.log(error);
     iziToast.show({
@@ -118,6 +125,16 @@ if (
 ) {
   scrollUpBtn.classList.add('visible');
 }
+
+emailInput.addEventListener('input', event => {
+  const mail = event.target.value;
+  localStorage.setItem('email', JSON.stringify(mail));
+});
+
+commentInput.addEventListener('input', event => {
+  const comment = event.target.value;
+  localStorage.setItem('comment', JSON.stringify(comment));
+});
 
 document.addEventListener('scroll', onScroll);
 
