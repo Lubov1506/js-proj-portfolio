@@ -1,13 +1,11 @@
-
 import Swiper from 'swiper/bundle';
 import { Navigation } from 'swiper/modules';
 
-
 const swiper = new Swiper('.swiper.about', {
   direction: 'horizontal',
-  spaceBetween: 0,
+  enabled: true,
   loop: true,
-  modules:[Navigation],
+  modules: [Navigation],
   keyboard: {
     enabled: true,
     onlyInViewport: false,
@@ -23,23 +21,14 @@ const swiper = new Swiper('.swiper.about', {
     320: {
       width: 260,
       slidesPerView: 2,
-
     },
     768: {
       slidesPerView: 3,
       width: 600,
-     
     },
     1440: {
       width: 1200,
       slidesPerView: 6,
-      slidesOffsetAfter: 100,
-  
     },
   },
-  
 });
-
-
-
-
