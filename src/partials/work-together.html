@@ -25,17 +25,19 @@
       Let’s <span class="work-together-span">work</span><br />together
     </h2>
     <form class="work-together-form">
-      <input
-        type="email"
-        name="email"
-        id="work-together-email"
-        class="work-together-input"
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-        placeholder="clients@gmail.com"
-        autocomplete="off"
-        required
-      />
-      <p class="email-text"></p>
+      <label for="email" class="work-together-label-mail">
+        <input
+          type="email"
+          name="email"
+          id="work-together-email"
+          class="work-together-input"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          placeholder="clients@gmail.com"
+          autocomplete="off"
+          required
+        />
+        <p class="email-text"></p>
+      </label>
       <input
         type="text"
         name="comment"
