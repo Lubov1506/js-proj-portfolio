@@ -1,9 +1,11 @@
 import Swiper from 'swiper/bundle';
 import { Navigation } from 'swiper/modules';
+
 const swiperContainerSkills = document.querySelector('.swiper-wrapper');
 const skillsswiper = new Swiper('.skills-swiper', {
+
   direction: 'horizontal',
-  spaceBetween: 0,
+  enabled: true,
   loop: true,
   modules: [Navigation],
   keyboard: {
@@ -22,11 +24,13 @@ const skillsswiper = new Swiper('.skills-swiper', {
     320: {
       width: 260,
       slidesPerView: 2,
+
       slidesPerGroup: 1,
       slidesOffsetAfter: 200,
     },
     768: {
       width: 600,
+
       slidesPerView: 3,
       slidesPerGroup: 1,
       slidesOffsetAfter: 200,
@@ -67,3 +71,4 @@ swiperContainerSkills.addEventListener('click', event => {
     skillsswiper.slideNext();
   }
 });
+
