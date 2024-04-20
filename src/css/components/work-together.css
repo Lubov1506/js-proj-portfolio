@@ -64,10 +64,6 @@
   border-color: #e74a3b;
 }
 
-.work-together-email-lable {
-  position: relative;
-}
-
 .email-text {
   opacity: 0;
   font-family: var(--font-family);
@@ -76,7 +72,7 @@
   line-height: 129%;
   letter-spacing: -0.02em;
   position: absolute;
-  bottom: -4px;
+  top: 50px;
   transform: translateX(-100%);
   transition: color var(--transition-pattern),
     transform var(--transition-pattern), opacity var(--transition-pattern);
@@ -173,7 +169,7 @@
   }
 
   .email-text {
-    bottom: -18px;
+    top: 100px;
   }
 
   .work-together-button {
