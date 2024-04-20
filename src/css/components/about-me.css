@@ -2,10 +2,15 @@
   padding-top: 32px;
   padding-bottom: 32px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .about-section {
     padding-top: 48px;
     padding-bottom: 48px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-section {
+    padding-bottom: 82px;
   }
 }
 
@@ -128,7 +133,7 @@
   display: block;
   background: transparent;
   cursor: pointer;
-  stroke: #FAFAFA;
+  stroke: #fafafa;
   fill: none;
   padding: 12px;
 }
@@ -138,7 +143,6 @@
     height: 40px;
     width: 40px;
     padding: 13px;
-
   }
 }
 
@@ -176,9 +180,8 @@
   background-color: var(--background);
 }
 .ac-header {
-display: flex;
-justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 .ac-panel.info {
   font-weight: 500;
@@ -205,11 +208,11 @@ button#ac-trigger-btn.ac-trigger.custom {
   border: none;
   padding-right: 0;
   font-family: var(--font-family);
-font-weight: 600;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: -0.02em;
-text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 button#ac-trigger-btn.ac-trigger.custom::after {
   display: none;
@@ -217,9 +220,45 @@ button#ac-trigger-btn.ac-trigger.custom::after {
 .ac-trigger {
   border: none;
 }
+.swiper-wrap-container{
+padding-top: 32px;
+}
+@media only screen and (min-width: 768px) {
+.swiper-wrap-container{
+padding-top: 48px;
+}
+}
+@media only screen and (min-width: 1440px) {
+.swiper-wrap-container{
+padding-top: 96px;
+}
+}
+.swiper#swiper-about {
+  overflow: hidden;
+  margin: 0;
+}
+.swiper-wrap-container {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+#swiper-about {
+  width: 260px;
+}
+@media only screen and (min-width: 768px) {
+  #swiper-about {
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #swiper-about {
+    width: 1200px;
+  }
+}
 
 .skills {
   width: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -280,6 +319,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
   justify-content: start;
 }
 
+
 @media screen and (min-width: 768px) {
   .swiper-wrapper.programmer-list {
     width: 600px;
@@ -291,6 +331,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
     width: 1200px;  }
 }
 
+
 .swiper-slide.programmer-item.active {
   background-color: #ed3b44;
 }
@@ -300,10 +341,12 @@ button#ac-trigger-btn.ac-trigger.custom::after {
  */
 
 
+
 .swiper-slide.programmer-item {
   display: flex;
   text-align: center;
-  padding-top: 53px;
+  align-items: center;
+  /* padding-top: 53px; */
   width: 130px;
   height: 130px;
   border-radius: 100%;
@@ -316,11 +359,18 @@ button#ac-trigger-btn.ac-trigger.custom::after {
   align-self: start;
   justify-content: center;
 }
+@media only screen and (min-width: 768px) {
+  .swiper-slide.programmer-item {
+    width: 200px;
+    height: 200px;
+  }
+}
 
 @media screen and (min-width: 768px) {
+
   .swiper-slide.programmer-item {
     font-size: 20px;
-    display: list-item;
+   
     width: 200px;
     height: 200px;
     padding-top: 88px;
@@ -329,6 +379,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
 
 .swiper-button-next-about {
   background-color: transparent;
+
   border: none;
   cursor: pointer;
   stroke: #3b3b3b;
@@ -339,6 +390,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
   align-items: center;
   z-index: 15;
 }
+
 
 
 .icon-svg-arrow-right {
@@ -370,3 +422,4 @@ button#ac-trigger-btn.ac-trigger.custom::after {
 .swiper-button-next-about:active {
   border: 0;
 }
+
