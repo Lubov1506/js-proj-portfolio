@@ -10,7 +10,7 @@ p {
   background-image: url('../../img/covers/background.png');
   background-size: cover;
   backdrop-filter: blur(15px);
-  background-color: (217, 217, 217, 0.04);
+  background-color: rgba(217, 217, 217, 0.04);
 }
 
 .section-covers.container {
@@ -25,7 +25,6 @@ p {
   column-gap: 32px;
   overflow: hidden;
   height: 300px;
-  
 }
 .img-cover {
   width: 100%;
@@ -40,19 +39,15 @@ p {
   animation: move 10s linear infinite;
 }
 
-@keyframes move{
+@keyframes move {
   0% {
     transform: translateY(-10%);
   }
 
   100% {
     transform: translateY(-180%);
-  
   }
 }
-
-
-
 
 @media screen and (min-width: 768px) {
   .section-covers .container {
@@ -74,12 +69,9 @@ p {
     gap: 40px;
     height: 900px;
   }
-  
 }
 @media screen and (min-width: 1440px) {
-
   .covers-list {
     grid-template-columns: repeat(3, 1fr);
   }
-  
 }
