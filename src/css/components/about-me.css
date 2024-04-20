@@ -121,21 +121,24 @@
 }
 
 .icon-svg {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 100px;
-  padding: 9px;
-  width: 36px;
   height: 36px;
-  stroke: var(--main-text);
-  stroke-width: 2px;
-  transition: var(--transition-pattern);
+  width: 36px;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 100px;
+  display: block;
+  background: transparent;
+  cursor: pointer;
+  stroke: #FAFAFA;
+  fill: none;
+  padding: 12px;
 }
 
 @media screen and (min-width: 768px) {
   .icon-svg {
-    padding: 10px;
-    width: 40px;
     height: 40px;
+    width: 40px;
+    padding: 13px;
+
   }
 }
 
@@ -173,8 +176,9 @@
   background-color: var(--background);
 }
 .ac-header {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
+
 }
 .ac-panel.info {
 
@@ -201,6 +205,12 @@ button#ac-trigger-btn.ac-trigger.custom {
   color: rgba(250, 250, 250, 0.4);
   border: none;
   padding-right: 0;
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: -0.02em;
+text-transform: uppercase;
 }
 button#ac-trigger-btn.ac-trigger.custom::after{
   display: none;
@@ -256,13 +266,18 @@ width: 260px;
 
 @media screen and (min-width: 1440px) {
   .swiper-wrapper.programmer-list{
-    width: 1200px;
+    width: 1000px;
   }
   }
 
 .swiper-slide.programmer-item.active {
   background-color: #ed3b44;
 }
+/* .swiper-slide.programmer-item:first-child {
+  background-color: #ed3b44;
+}
+ */
+
 
 
 .swiper-slide.programmer-item {
@@ -310,10 +325,10 @@ width: 260px;
 @media screen and (min-width: 768px) {
   .swiper-button-next-about {
     margin-top: 80px;
+    margin-left: 64px;
   }}
   @media screen and (min-width: 1440px) {
     .swiper-button-next-about {
- 
   margin-left: 72px;
     }}
   

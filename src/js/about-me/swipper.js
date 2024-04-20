@@ -23,17 +23,17 @@ const swiper = new Swiper('.swiper.about', {
     320: {
       width: 260,
       slidesPerView: 2,
-      slidesOffsetAfter: 200,
+
     },
     768: {
       slidesPerView: 3,
       width: 600,
-      slidesOffsetAfter: 200,
+     
     },
     1440: {
       width: 1200,
       slidesPerView: 6,
-      slidesOffsetAfter: 200,
+      slidesOffsetAfter: 100,
   
     },
   },
