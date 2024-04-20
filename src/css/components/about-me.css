@@ -253,7 +253,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
 @media screen and (min-width: 768px) {
   .skills {
     justify-content: space-between;
-    gap: 64;
+    gap: 64px;
   }
   .skills-swiper-container {
     width: 600px;
@@ -268,7 +268,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
     margin-top: 48px;
     justify-content: space-between;
     padding: 0 32px;
-    gap: 72;
+    gap: 72px;
   }
   .skills-swiper-container {
     width: 1200px;
