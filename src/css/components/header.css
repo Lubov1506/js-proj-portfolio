@@ -28,15 +28,6 @@
   border-radius: 18px;
   overflow: hidden;
 }
-.header-logo-img {
-  position: absolute;
-  top: 30px;
-  left: 40px;
-  position: absolute;
-  top: -9px;
-  left: -70px;
-  max-width: 300%;
-}
 
 .header-open-menu-btn {
   display: none;
