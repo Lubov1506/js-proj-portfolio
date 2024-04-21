@@ -338,7 +338,6 @@
 /* #region scroll-up */
 
 .scroll-up-btn {
-  padding: 5px;
   z-index: 1001;
   display: flex;
   justify-content: center;
@@ -358,23 +357,31 @@
 }
 .scroll-up-svg {
   stroke: var(--main-text);
+  width: 20px;
+  height: 20px;
 }
 
 @media screen and (min-width: 768px) {
   .scroll-up-btn {
-    padding: 10px;
     width: 60px;
     height: 60px;
     bottom: 30px;
     right: 30px;
   }
+  .scroll-up-svg {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .scroll-up-btn {
-    padding: 15px;
     width: 90px;
     height: 90px;
+  }
+  .scroll-up-svg {
+    width: 60px;
+    height: 60px;
   }
 }
 
