@@ -9,13 +9,10 @@ new Swiper('.projectSwiper', {
     pageUpDown: true,
     tabKeys: true,
   },
-  
   mousewheel: {
     invert: true,
   },
-
   grabCursor: true,
-
   navigation: {
     nextEl: '.js-btn_arrow-right',
     prevEl: '.js-btn_arrow-left',
