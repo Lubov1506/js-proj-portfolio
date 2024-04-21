@@ -128,9 +128,10 @@
   display: block;
   background: transparent;
   cursor: pointer;
-  stroke: #FAFAFA;
+  stroke: var(--main-text);
   fill: none;
   padding: 12px;
+  margin-top: 32px;
 }
 
 @media screen and (min-width: 768px) {
@@ -138,7 +139,6 @@
     height: 40px;
     width: 40px;
     padding: 13px;
-
   }
 }
 
@@ -174,11 +174,11 @@
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   background-color: var(--background);
+  padding-bottom: 32px;
 }
 .ac-header {
-display: flex;
-justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 .ac-panel.info {
   font-weight: 500;
@@ -198,6 +198,7 @@ justify-content: center;
   }
 }
 button.ac-trigger.custom {
+  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -205,13 +206,13 @@ button.ac-trigger.custom {
   border: none;
   padding-right: 0;
   font-family: var(--font-family);
-font-weight: 600;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: -0.02em;
-text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
-.my-information .ac .ac-trigger:focus{
+.my-information .ac .ac-trigger:focus {
   color: rgba(250, 250, 250, 0.4);
 }
 button#ac-trigger-btn.ac-trigger.custom::after {
@@ -221,7 +222,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
 .ac .ac-trigger::after {
   content: none;
 }
-.ac.is-active>.ac-header .ac-trigger::after{
+.ac.is-active > .ac-header .ac-trigger::after {
   content: none;
 }
 .ac-trigger {
@@ -239,7 +240,6 @@ button#ac-trigger-btn.ac-trigger.custom::after {
   margin-bottom: 32px;
   margin-left: 0;
   margin-right: 0;
-  /* gap: 55px; */
   padding: 0;
 }
 .skills-swiper-container {
@@ -282,12 +282,11 @@ button#ac-trigger-btn.ac-trigger.custom::after {
   }
 }
 
-.swiper-wrapper.programmer-list {
+.swiper-wrapper.programmer-list .swiper-slide-active {
   width: 260px;
-  height: auto;
   margin: 0 auto;
-  padding: 0;
-  justify-content: start;
+  justify-content: center;
+  background-color: #ed3b44;
 }
 
 @media screen and (min-width: 768px) {
@@ -298,17 +297,9 @@ button#ac-trigger-btn.ac-trigger.custom::after {
 
 @media screen and (min-width: 1440px) {
   .swiper-wrapper.programmer-list {
-    width: 1200px;  }
+    width: 1200px;
+  }
 }
-
-.swiper-slide.programmer-item.active {
-  background-color: #ed3b44;
-}
-/* .swiper-slide.programmer-item:first-child {
-  background-color: #ed3b44;
-}
- */
-
 
 .swiper-slide.programmer-item {
   display: flex;
@@ -350,7 +341,6 @@ button#ac-trigger-btn.ac-trigger.custom::after {
   z-index: 15;
 }
 
-
 .icon-svg-arrow-right {
   width: 28px;
   height: 28px;
@@ -372,7 +362,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
 .icon-svg-arrow-right:hover,
 .icon-svg-arrow-right:focus,
 .icon-svg-arrow-right:active {
-  stroke: #fafafa;
+  stroke:var(--main-text);
   border: 0;
 }
 .swiper-button-next-about:hover,

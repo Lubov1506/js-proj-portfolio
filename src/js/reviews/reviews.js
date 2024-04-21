@@ -1,4 +1,5 @@
 import Swiper from 'swiper/bundle';
+import { Navigation } from 'swiper/modules';
 import axios from 'axios';
 import iziToast from 'izitoast';
 import { createReviewsList } from './render-functions';
@@ -43,12 +44,11 @@ fetchReviews(urlapi).then(reviews => {
   reviewlist.innerHTML = createReviewsList(reviews);
 
   reviewsswiper = new Swiper('.swiper-reviews', {
-    modules: Navigation,
+    modules: [Navigation],
     direction: 'horizontal',
     observer: true,
     observeParents: true,
     slidesPerView: 1,
-    slidesPerGroup: 1,
     spaceBetween: 18,
     keyboard: {
       enabled: true,
@@ -63,12 +63,10 @@ fetchReviews(urlapi).then(reviews => {
       768: {
         slidesPerView: 2,
         spaceBetween: 16,
-        slidesPerGroup: 1,
       },
       1440: {
         slidesPerView: 4,
         spaceBetween: 16,
-        slidesPerGroup: 1,
       },
     },
     navigation: {
