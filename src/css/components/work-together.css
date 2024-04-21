@@ -56,16 +56,16 @@
   color: rgba(250, 250, 250, 0.6);
 }
 
+.work-together-label-mail {
+  position: relative;
+}
+
 .correct-input {
   border-color: #3cbc81;
 }
 
 .incorrect-input {
   border-color: #e74a3b;
-}
-
-.work-together-email-lable {
-  position: relative;
 }
 
 .email-text {
@@ -76,7 +76,7 @@
   line-height: 129%;
   letter-spacing: -0.02em;
   position: absolute;
-  bottom: -4px;
+  bottom: -5px;
   transform: translateX(-100%);
   transition: color var(--transition-pattern),
     transform var(--transition-pattern), opacity var(--transition-pattern);
@@ -173,7 +173,7 @@
   }
 
   .email-text {
-    bottom: -18px;
+    bottom: -20px;
   }
 
   .work-together-button {
@@ -299,6 +299,9 @@
   right: 20px;
   background-color: transparent;
   border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
 }
 
 .work-together-modal-svg {

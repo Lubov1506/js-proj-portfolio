@@ -28,15 +28,6 @@
   border-radius: 18px;
   overflow: hidden;
 }
-.header-logo-img {
-  position: absolute;
-  top: 30px;
-  left: 40px;
-  position: absolute;
-  top: -9px;
-  left: -70px;
-  max-width: 300%;
-}
 
 .header-open-menu-btn {
   display: none;
@@ -98,7 +89,8 @@
   .header-nav-item:hover,
   .header-nav-item:focus {
     color: #e0373f;
-    scale: 1.1;
+    /* scale: 1.1; */
+    transform: scale(1.1);
   }
   .header-open-menu-btn {
     display: block;
@@ -114,7 +106,8 @@
   }
   .header-open-menu-btn:hover,
   .header-open-menu-btn:focus {
-    scale: 1.1;
+    /* scale: 1.1; */
+    transform: scale(1.1);
     color: #e0373f;
   }
   .header-open-menu-span {

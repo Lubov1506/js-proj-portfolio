@@ -25,7 +25,7 @@
       Let’s <span class="work-together-span">work</span><br />together
     </h2>
     <form class="work-together-form">
-      <lable class="work-together-email-lable">
+      <label for="work-together-email" class="work-together-label-mail">
         <input
           type="email"
           name="email"
@@ -36,8 +36,8 @@
           autocomplete="off"
           required
         />
-        <p class="email-text"></p>
-      </lable>
+      </label>
+      <p class="email-text"></p>
       <input
         type="text"
         name="comment"
@@ -46,7 +46,13 @@
         placeholder="comments"
         autocomplete="off"
       />
-      <button class="work-together-button" type="submit">Send</button>
+      <button
+        class="work-together-button"
+        type="submit"
+        name="work-together-submit-button"
+      >
+        Send
+      </button>
     </form>
     <div class="work-together-wrapper-contacts">
       <a href="mailto:lloydjefferson@gmail.com" class="work-together-contact"
@@ -60,7 +66,11 @@
 
 <div class="backdrop"></div>
 <div class="work-together-modal-window">
-  <button type="button" class="work-together-modal-btn">
+  <button
+    type="button"
+    class="work-together-modal-btn"
+    name="work-together-modal-btn"
+  >
     <svg class="work-together-modal-svg" width="24" height="24">
       <use href="./img/icons.svg#icon-x"></use>
     </svg>

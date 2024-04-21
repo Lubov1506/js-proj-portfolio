@@ -121,21 +121,24 @@
 }
 
 .icon-svg {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 100px;
-  padding: 9px;
-  width: 36px;
   height: 36px;
-  stroke: var(--main-text);
-  stroke-width: 2px;
-  transition: var(--transition-pattern);
+  width: 36px;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 100px;
+  display: block;
+  background: transparent;
+  cursor: pointer;
+  stroke: #FAFAFA;
+  fill: none;
+  padding: 12px;
 }
 
 @media screen and (min-width: 768px) {
   .icon-svg {
-    padding: 10px;
-    width: 40px;
     height: 40px;
+    width: 40px;
+    padding: 13px;
+
   }
 }
 
@@ -173,11 +176,11 @@
   background-color: var(--background);
 }
 .ac-header {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
+
 }
 .ac-panel.info {
-
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -185,70 +188,119 @@
 }
 
 @media only screen and (min-width: 1440px) {
-   .ac-panel.info {
-  margin-left: auto;
-  width: 612px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
+  .ac-panel.info {
+    margin-left: auto;
+    width: 612px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
   }
 }
-button#ac-trigger-btn.ac-trigger.custom {
+button.ac-trigger.custom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: rgba(250, 250, 250, 0.4);
   border: none;
   padding-right: 0;
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: -0.02em;
+text-transform: uppercase;
 }
-button#ac-trigger-btn.ac-trigger.custom::after{
+.my-information .ac .ac-trigger:focus{
+  color: rgba(250, 250, 250, 0.4);
+}
+button#ac-trigger-btn.ac-trigger.custom::after {
   display: none;
 }
 .ac-trigger {
   border: none;
 }
 
-
-.swiper.about {
+.skills {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
   margin-top: 32px;
   margin-bottom: 32px;
-  max-width: 1312px;
-
+  margin-left: 0;
+  margin-right: 0;
+  /* gap: 55px; */
+  padding: 0;
 }
+.skills-swiper-container {
+  width: 260px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.skills-swiper {
+  width: 100%;
+  height: 100%;
+}
+.skills-swiper.about {
+  width: 260px;
+}
+
 @media screen and (min-width: 768px) {
-  .swiper.about {
-    margin-top: 64px;
-    margin-bottom: 48px;
+  .skills {
+    justify-content: space-between;
+    gap: 64px;
+  }
+  .skills-swiper-container {
+    width: 600px;
   }
 }
 
 @media screen and (min-width: 1439px) {
-  .swiper.about {
-    margin-top: 96px;
-    margin-bottom: 115px;
-    padding-left: 32px;
-    padding-right: 32px;
-    display: flex;
-    justify-content: flex-start;
+  .skills {
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    margin-top: 48px;
+    justify-content: space-between;
+    padding: 0 32px;
+    gap: 72px;
+  }
+  .skills-swiper-container {
+    width: 1200px;
   }
 }
 
 .swiper-wrapper.programmer-list {
-  min-width: 130px; 
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  position: relative;
- 
+  width: 260px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: start;
 }
 
-.swiper-wrapper.programmer-list .swiper-slide:first-child {
+@media screen and (min-width: 768px) {
+  .swiper-wrapper.programmer-list {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .swiper-wrapper.programmer-list {
+    width: 1200px;  }
+}
+
+.swiper-slide.programmer-item.active {
   background-color: #ed3b44;
 }
+/* .swiper-slide.programmer-item:first-child {
+  background-color: #ed3b44;
+}
+ */
 
 
 .swiper-slide.programmer-item {
@@ -268,9 +320,7 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   justify-content: center;
 }
 
-
-
- @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .swiper-slide.programmer-item {
     font-size: 20px;
     display: list-item;
@@ -280,45 +330,46 @@ button#ac-trigger-btn.ac-trigger.custom::after{
   }
 }
 
-
 .swiper-button-next-about {
+  background-color: transparent;
   border: none;
   cursor: pointer;
-  width: 28px; 
-  height: 28px; 
   stroke: #3b3b3b;
   fill: none;
   stroke-width: 2px;
-  display: block;
-    position: absolute;
-    right: 0; 
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    z-index: 10; 
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  z-index: 15;
 }
-
-@media screen and (min-width: 768px) {
-  .swiper-button-next-about {
-    width: 40px;
-    height: 40px;
-  }}
-  @media screen and (min-width: 1440px) {
-    .swiper-button-next-about {
-      width: 40px;
-      height: 40px;
-    }}
-  
 
 
 .icon-svg-arrow-right {
-
+  width: 28px;
+  height: 28px;
+  border: none;
 }
 
-/* @media screen and (min-width: 768px) {
-  .icon-svg-arrow-right  {
-    margin-top: 80px;
-  }} */
-
-
-
+@media screen and (min-width: 768px) {
+  .icon-svg-arrow-right {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .icon-svg-arrow-right {
+    width: 40px;
+    height: 40px;
+  }
+}
+.icon-svg-arrow-right:hover,
+.icon-svg-arrow-right:focus,
+.icon-svg-arrow-right:active {
+  stroke: #fafafa;
+  border: 0;
+}
+.swiper-button-next-about:hover,
+.swiper-button-next-about:focus,
+.swiper-button-next-about:active {
+  border: 0;
+}

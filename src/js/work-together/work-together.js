@@ -8,8 +8,20 @@ const commentInput = document.querySelector('#work-together-comment');
 const message = document.querySelector('.email-text');
 const backdrop = document.querySelector('.backdrop');
 const modalWindow = document.querySelector('.work-together-modal-window');
-const closeModalBtn = document.querySelector('.work-together-modal-btn');
 const scrollUpBtn = document.querySelector('.scroll-up-btn');
+if (
+  localStorage.getItem('email') !== null &&
+  localStorage.getItem('email') !== undefined
+) {
+  emailInput.value = JSON.parse(localStorage.getItem('email')).trim();
+}
+
+if (
+  localStorage.getItem('comment') !== null &&
+  localStorage.getItem('comment') !== undefined
+) {
+  commentInput.value = JSON.parse(localStorage.getItem('comment')).trim();
+}
 
 class UserComent {
   constructor(mail, comment) {
@@ -22,7 +34,8 @@ class UserComent {
 const onClose = event => {
   if (
     event.target.classList.contains('backdrop') ||
-    event.target.nodeName === 'svg'
+    event.target.nodeName === 'svg' ||
+    event.target.nodeName === 'BUTTON'
   ) {
     scrollUpBtn.classList.add('visible');
     document.body.classList.remove('backdrop-opened');
@@ -33,7 +46,6 @@ const onClose = event => {
 };
 
 const onEscClose = event => {
-  console.log(event.key);
   if (event.key === 'Escape') {
     scrollUpBtn.classList.add('visible');
     document.body.classList.remove('backdrop-opened');
@@ -47,8 +59,8 @@ const submitHandler = async event => {
   try {
     event.preventDefault();
     document.body.classList.add('cursor-wait');
-    const mail = emailInput.value;
-    const comment = commentInput.value;
+    const mail = emailInput.value.trim();
+    const comment = commentInput.value.trim();
     scrollUpBtn.classList.remove('visible');
     await axios.post('/requests', new UserComent(mail, comment));
     event.target.reset();
@@ -58,6 +70,8 @@ const submitHandler = async event => {
     document.body.addEventListener('click', onClose);
     window.addEventListener('keydown', onEscClose);
     document.body.classList.remove('cursor-wait');
+    localStorage.removeItem('email');
+    localStorage.removeItem('comment');
   } catch (error) {
     console.log(error);
     iziToast.show({
@@ -77,6 +91,7 @@ const emailValidation = mail => {
   return mail.match(validRegex);
 };
 const inputCheckHandler = () => {
+  emailInput.value = emailInput.value.trim();
   const mail = emailInput.value;
   if (mail === '') {
     return;
@@ -118,6 +133,16 @@ if (
 ) {
   scrollUpBtn.classList.add('visible');
 }
+
+emailInput.addEventListener('input', event => {
+  const mail = event.target.value;
+  localStorage.setItem('email', JSON.stringify(mail));
+});
+
+commentInput.addEventListener('input', event => {
+  const comment = event.target.value;
+  localStorage.setItem('comment', JSON.stringify(comment));
+});
 
 document.addEventListener('scroll', onScroll);
 
