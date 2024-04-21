@@ -5,6 +5,7 @@ const skillsswiper = new Swiper('.skills-swiper', {
   direction: 'horizontal',
   spaceBetween: 0,
   loop: true,
+  touch: true,
   modules: [Navigation],
   keyboard: {
     keyCodes: [9, 37, 39],
