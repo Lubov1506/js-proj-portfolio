@@ -41,7 +41,7 @@ p {
 
 @keyframes move {
   0% {
-    transform: translateY(-10%);
+    transform: translateY(10%);
   }
 
   100% {
@@ -72,6 +72,23 @@ p {
 }
 @media screen and (min-width: 1440px) {
   .covers-list {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+
+.lines{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../img/covers/lines.png');
+  background-size: cover;
+  z-index: 1;
+
 }

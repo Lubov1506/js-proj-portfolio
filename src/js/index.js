@@ -6,3 +6,4 @@ import './work-together/work-together';
 import './reviews/reviews';
 import './faq/faq';
 import './projects/projects';
+import './covers/covers';

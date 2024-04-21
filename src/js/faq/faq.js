@@ -10,4 +10,3 @@ const faqacc= new Accordion(accorContainer, {
 
 
 
-console.log(faqacc);
