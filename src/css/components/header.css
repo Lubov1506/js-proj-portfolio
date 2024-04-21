@@ -76,10 +76,10 @@
     transition: transform var(--transition-pattern),
       opacity var(--transition-pattern);
   }
-    .header-nav-list.is-hidden {
+  .header-nav-list.is-hidden {
     transform: translateY(-100%);
-    visibility: hidden;  
-    opacity: 0; 
+    visibility: hidden;
+    opacity: 0;
     transition: transform var(--transition-pattern),
       opacity var(--transition-pattern), visibility var(--transition-pattern);
   }
