@@ -1,4 +1,5 @@
 import Swiper from 'swiper/bundle';
+import { Navigation } from 'swiper/modules';
 import axios from 'axios';
 import iziToast from 'izitoast';
 import { createReviewsList } from './render-functions';
