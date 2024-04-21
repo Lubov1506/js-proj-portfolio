@@ -9,19 +9,10 @@ const message = document.querySelector('.email-text');
 const backdrop = document.querySelector('.backdrop');
 const modalWindow = document.querySelector('.work-together-modal-window');
 const scrollUpBtn = document.querySelector('.scroll-up-btn');
-if (
-  localStorage.getItem('email') !== null &&
-  localStorage.getItem('email') !== undefined
-) {
-  emailInput.value = JSON.parse(localStorage.getItem('email')).trim();
-}
 
-if (
-  localStorage.getItem('comment') !== null &&
-  localStorage.getItem('comment') !== undefined
-) {
-  commentInput.value = JSON.parse(localStorage.getItem('comment')).trim();
-}
+const savedValues = JSON.parse(localStorage.getItem('savedValues')) ?? {};
+emailInput.value = savedValues.email ?? '';
+commentInput.value = savedValues.comment ?? '';
 
 class UserComent {
   constructor(mail, comment) {
@@ -70,8 +61,7 @@ const submitHandler = async event => {
     document.body.addEventListener('click', onClose);
     window.addEventListener('keydown', onEscClose);
     document.body.classList.remove('cursor-wait');
-    localStorage.removeItem('email');
-    localStorage.removeItem('comment');
+    localStorage.removeItem('savedValues');
   } catch (error) {
     console.log(error);
     iziToast.show({
@@ -126,6 +116,14 @@ const onScroll = () => {
   }
 };
 
+const onFormInput = event => {
+  const { target: targetElement } = event;
+  const inputName = targetElement.name;
+  const inputValue = targetElement.value.trim();
+  savedValues[inputName] = inputValue;
+  localStorage.setItem('savedValues', JSON.stringify(savedValues));
+};
+
 if (
   window.scrollY > 200 &&
   !scrollUpBtn.classList.contains('visible') &&
@@ -134,15 +132,7 @@ if (
   scrollUpBtn.classList.add('visible');
 }
 
-emailInput.addEventListener('input', event => {
-  const mail = event.target.value;
-  localStorage.setItem('email', JSON.stringify(mail));
-});
-
-commentInput.addEventListener('input', event => {
-  const comment = event.target.value;
-  localStorage.setItem('comment', JSON.stringify(comment));
-});
+workTogetherForm.addEventListener('input', onFormInput);
 
 document.addEventListener('scroll', onScroll);
 
