@@ -14,7 +14,7 @@ const savedValues = JSON.parse(localStorage.getItem('savedValues')) ?? {};
 emailInput.value = savedValues.email ?? '';
 commentInput.value = savedValues.comment ?? '';
 
-class UserComent {
+class UserComment {
   constructor(mail, comment) {
     this.email = mail;
     this.comment = comment;
@@ -53,7 +53,7 @@ const submitHandler = async event => {
     const mail = emailInput.value.trim();
     const comment = commentInput.value.trim();
     scrollUpBtn.classList.remove('visible');
-    await axios.post('/requests', new UserComent(mail, comment));
+    await axios.post('/requests', new UserComment(mail, comment));
     event.target.reset();
     document.body.classList.add('backdrop-opened');
     backdrop.classList.add('backdrop-is-open');
