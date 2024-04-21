@@ -27,8 +27,8 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 64px;
-  position: relative;
 }
+
 .work-together-input {
   text-overflow: ellipsis;
   width: 100%;
@@ -56,7 +56,7 @@
   color: rgba(250, 250, 250, 0.6);
 }
 
-.work-together-label-mail {
+.work-together-input-div {
   position: relative;
 }
 
