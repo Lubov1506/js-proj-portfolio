@@ -44,7 +44,7 @@ fetchReviews(urlapi).then(reviews => {
   reviewlist.innerHTML = createReviewsList(reviews);
 
   reviewsswiper = new Swiper('.swiper-reviews', {
-    modules: [Navigation, Keyboard],
+    modules: [Navigation],
     direction: 'horizontal',
     observer: true,
     observeParents: true,
