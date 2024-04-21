@@ -128,7 +128,7 @@
   display: block;
   background: transparent;
   cursor: pointer;
-  stroke: #fafafa;
+  stroke: var(--main-text);
   fill: none;
   padding: 12px;
   margin-top: 32px;
@@ -362,7 +362,7 @@ button#ac-trigger-btn.ac-trigger.custom::after {
 .icon-svg-arrow-right:hover,
 .icon-svg-arrow-right:focus,
 .icon-svg-arrow-right:active {
-  stroke: #fafafa;
+  stroke:var(--main-text);
   border: 0;
 }
 .swiper-button-next-about:hover,
