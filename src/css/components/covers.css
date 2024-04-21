@@ -2,63 +2,117 @@
 p {
   padding: 0;
 }
-.covers-wrap {
-  padding-top: 32px;
-  padding-bottom: 32px;
+.super {
+  transform: rotate(16deg);
+  /* animation: move 13s linear infinite; */
+
+  
 }
 .section-covers {
-  background-image: url('../../img/covers/background.png');
+  outline: 5px solid red;
+  background-image: url('../../img/covers/background.jpg');
   background-size: cover;
   backdrop-filter: blur(15px);
   background-color: (217, 217, 217, 0.04);
+  height: 508px;
+  position: relative;
 }
 
 .section-covers.container {
   padding: 0;
+  /* overflow: hidden; */
+}
+.covers-wrapper {
+  width: 100%;
+  display: flex;
+  margin-bottom: 30px;
+  margin-left: 130px;
+  /* rotate: 16deg; */
+  /* overflow: hidden; */
+}
+.covers-list {
+  display: flex;
+  gap: 32px;
+  animation: move 13s linear infinite;
+}
+.covers-wrapper-2 {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;  
+  /* transform: rotate(16deg); */
+  /* rotate: 16deg; */
+
+}
+.covers-list-2 {
+  display: flex;
+  gap: 32px;
+  animation: move 13s linear infinite;
+  /* transform: translateX(25%); */
+
 }
 
-.covers-list {
-  justify-content: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  column-gap: 32px;
+.covers-wrapper-3 {
+  display: flex;
+  gap: 32px;
+  /* rotate: 16deg; */
+  margin-left: 130px;
+  margin-bottom: 32px;
+}
+
+.covers-list-3 {
+  display: flex;
+  gap: 32px;  
+  animation: move 13s linear infinite;
+
+}
+
+
+.cover-item {
+  height: 160px;
+  width: 280px;
   overflow: hidden;
-  height: 300px;
-  
 }
 .img-cover {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: rotate(20deg);
+  object-fit:cover;
 }
-
-.cover-item {
-  width: 100%;
-  height: 100%;
-  animation: move 10s linear infinite;
-}
-
-@keyframes move{
+@keyframes move {
   0% {
-    transform: translateY(10%);
+    transform: translateX(-15%);
   }
-
+ 
+  50% {
+    transform: translateX(-70%);
+  }
   100% {
-    transform: translateY(-180%);
-  
+    transform: translateX(-15%);
   }
-}
+ }
+
 
 
 
 
 @media screen and (min-width: 768px) {
+  
+  .section-covers {
+    outline: 5px solid red;
+    background-image: url('../../img/covers/background.jpg');
+    background-size: cover;
+    backdrop-filter: blur(15px);
+    background-color: (217, 217, 217, 0.04);
+    height: 906px;
+    position: relative;
+  }
   .section-covers .container {
     padding: 0;
   }
-
+  .covers-list-2, .covers-list-3, .covers-list {
+    display: flex;
+    margin-bottom: 32px;
+    gap: 32px;
+  }
   .cover-item {
     height: 314px;
     width: 544px;
@@ -69,34 +123,72 @@ p {
     object-fit: cover;
   }
 
-  .covers-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    height: 900px;
-  }
+
   
 }
 @media screen and (min-width: 1440px) {
-
+  .super {
+    transform: rotate(16deg);
+    /* animation: move 13s linear infinite; */
+  
+  }
   .covers-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    gap: 32px;
+    animation: move 7s linear infinite;
+  }
+  .covers-wrapper-2 {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;  
+    
+  
+  }
+  .covers-list-2 {
+    display: flex;
+    gap: 32px;
+    animation: move 7s linear infinite;
+    /* transform: translateX(25%); */
+  
   }
   
+  .covers-wrapper-3 {
+    display: flex;
+    gap: 32px;
+    /* rotate: 16deg; */
+    margin-left: 130px;
+    margin-bottom: 32px;
+  }
+  
+  .covers-list-3 {
+    display: flex;
+    gap: 32px;  
+    animation: move 7s linear infinite;
+  
+  }
+  
+  
+  
+  
+  
+  @keyframes move {
+    0% {
+      transform: translateX(-10%);
+    }
+   
+    50% {
+      transform: translateX(-30%);
+    }
+    100% {
+      transform: translateX(-10%);
+    }
+   }
+   .cover-item {
+    height: 314px;
+    width: 544px;
+  }
+
+
 }
 
 
-.lines{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../../img/covers/lines.png');
-  background-size: cover;
-  z-index: 1;
-
-}
