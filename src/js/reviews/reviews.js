@@ -48,7 +48,6 @@ fetchReviews(urlapi).then(reviews => {
     observer: true,
     observeParents: true,
     slidesPerView: 1,
-    slidesPerGroup: 1,
     spaceBetween: 18,
     keyboard: {
       enabled: true,
@@ -63,12 +62,10 @@ fetchReviews(urlapi).then(reviews => {
       768: {
         slidesPerView: 2,
         spaceBetween: 16,
-        slidesPerGroup: 1,
       },
       1440: {
         slidesPerView: 4,
         spaceBetween: 16,
-        slidesPerGroup: 1,
       },
     },
     navigation: {
