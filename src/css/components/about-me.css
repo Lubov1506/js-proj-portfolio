@@ -217,6 +217,13 @@ text-transform: uppercase;
 button#ac-trigger-btn.ac-trigger.custom::after {
   display: none;
 }
+
+.ac .ac-trigger::after {
+  content: none;
+}
+.ac.is-active>.ac-header .ac-trigger::after{
+  content: none;
+}
 .ac-trigger {
   border: none;
 }
