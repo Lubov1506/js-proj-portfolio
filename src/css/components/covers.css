@@ -7,7 +7,7 @@ p {
   /* animation: move 13s linear infinite; */
 }
 .section-covers {
-  outline: 5px solid red;
+
   background-image: url('../../img/covers/background.jpg');
   background-size: cover;
   backdrop-filter: blur(15px);
@@ -89,7 +89,7 @@ p {
 
 @media screen and (min-width: 768px) {
   .section-covers {
-    outline: 5px solid red;
+
     background-image: url('../../img/covers/background.jpg');
     background-size: cover;
     backdrop-filter: blur(15px);
