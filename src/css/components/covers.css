@@ -172,6 +172,9 @@ p {
     animation: move 7s linear infinite;
   }
 
+  .animate{
+     animation: move 7s linear infinite;
+  }
   @keyframes move {
     0% {
       transform: translateX(-10%);
