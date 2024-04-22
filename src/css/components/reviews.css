@@ -22,22 +22,14 @@
   width: auto;
   height: auto;
 }
-.reviews-item-container {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 20px;
-  max-width: 344px;
-  min-height: 302px;
-}
-
 .reviews-item {
   display: flex;
   gap: 8px;
   flex-direction: column;
-  /* border: 1px solid rgba(250, 250, 250, 0.2); */
+  border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
-  max-width: 344px;
-  min-height: 302px;
+  width: 344px;
   max-height: 302px;
 }
 .reviews-avatar {
@@ -62,7 +54,7 @@
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
   max-width: 295px;
-  min-height: 120px;
+  height: 120px;
   overflow-x: hidden;
   overflow-y: auto;
   padding-right: 4px;
@@ -149,64 +141,6 @@
   overflow: hidden;
 }
 
-/* photo slider */
-
-.card {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  background: transparent;
-  overflow: hidden;
-  transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1.25);
-}
-
-.card .imgBx,
-.card .details {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  box-sizing: border-box;
-  transition: 0.5s;
-}
-
-.card .imgBx {
-  top: 0;
-  left: 100%;
-  transition: left 0.5s;
-}
-
-.card .imgBx img {
-  width: 100%;
-  height: 302px;
-  object-fit: cover;
-  object-position: top;
-}
-
-.card .details {
-  top: 0;
-  left: 0;
-}
-@media screen and (max-width: 1439px) {
-  .click .details {
-    left: 100%;
-    transition: left 0.5s;
-  }
-  .click .imgBx {
-    left: 0;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .card:hover .details {
-    left: 100%;
-    transition: left 0.5s;
-  }
-  .card:hover .imgBx {
-    left: 0;
-  }
-}
-
-/* end of slider */
-
 @media screen and (min-width: 768px) {
   .reviews-container {
     padding-top: 96px;
@@ -215,10 +149,8 @@
     max-width: 768px;
   }
 
-  .reviews-item,
-  .reviews-item-container {
+  .reviews-item {
     width: 344px;
-    min-height: 302px;
   }
 
   .reviews-text {
@@ -248,8 +180,7 @@
     max-width: 1440px;
   }
 
-  .reviews-item,
-  .reviews-item-container {
+  .reviews-item {
     width: 332px;
     min-height: 302px;
   }
