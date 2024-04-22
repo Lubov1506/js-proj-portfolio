@@ -11,6 +11,7 @@ const reviewlist = document.querySelector('.reviews-list');
 const swiperContainer = document.querySelector('.swiper-reviews');
 const prevbtnEl = document.querySelector('.js-btn-prev');
 const nextbtnEl = document.querySelector('.js-btn-next');
+
 let theEnd = false;
 
 const fetchReviews = async url => {
@@ -108,3 +109,5 @@ export const isInViewport = element => {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
+
+

@@ -38,7 +38,6 @@
   padding: 32px 24px;
   max-width: 344px;
   min-height: 302px;
-  max-height: 302px;
 }
 .reviews-avatar {
   border-radius: 10px;
@@ -156,8 +155,6 @@
   transform: translate(-50%, -50%);
   background: transparent;
   overflow: hidden;
-  /* width: 100%;
-  height: 100%; */
   transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1.25);
 }
 
@@ -173,11 +170,7 @@
 .card .imgBx {
   top: 0;
   left: 100%;
-}
-
-.card:hover .imgBx {
-  top: 0;
-  left: 0;
+  transition: left 0.5s;
 }
 
 .card .imgBx img {
@@ -188,11 +181,18 @@
   top: 0;
   left: 0;
 }
-
-.card:hover .details {
-  top: 0;
-  left: -100%;
+@media screen and (min-width: 1440px) {
+  .card:hover .details,
+  .card:focus .details {
+    left: 100%;
+    transition: left 0.5s;
+  }
+  .card:hover .imgBx,
+  .card:focus .imgBx {
+    left: 0;
+  }
 }
+
 /* end of slider */
 
 @media screen and (min-width: 768px) {
