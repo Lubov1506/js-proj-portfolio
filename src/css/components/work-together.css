@@ -8,7 +8,7 @@
 }
 .work-together-avatar {
   display: inline-block;
-  transform: translateY(5px);
+  transform: translateY(10px);
 }
 .work-together-title {
   font-family: var(--font-family);
@@ -152,7 +152,7 @@
   }
   .work-together-avatar {
     display: inline-block;
-    transform: translateY(12px);
+    transform: translate(-9px, 12px);
   }
   .work-together-title {
     font-size: 64px;
@@ -202,7 +202,7 @@
   }
   .work-together-avatar {
     display: inline-block;
-    transform: translateY(12px);
+    transform: translate(-9px, 12px);
   }
   .work-together-form {
     gap: 0px;
