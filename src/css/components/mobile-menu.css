@@ -16,7 +16,7 @@ body.menu-open {
   z-index: 100;
   width: 100%;
   height: 100%;
-  background-image: url('../../img/mobile-menu/mobile-bg.jpg');
+  background-image: url('../../img/mobile-menu/mobile-bg.webp');
   transform: translateX(100%);
   background-size: cover;
   background-repeat: no-repeat;
