@@ -8,6 +8,7 @@
 
 .header {
   position: absolute;
+  margin-top: 32px;
   z-index: 5;
   width: 100%;
 }
@@ -15,7 +16,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 32px;
 }
 .header-logo {
   display: flex;
@@ -51,6 +51,7 @@
   cursor: pointer;
   background: transparent;
   border: transparent;
+  padding: 0;
 }
 @media (max-width: 768px) {
   .header-nav-list {
