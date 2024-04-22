@@ -3,7 +3,7 @@
   margin-top: -20px;
 }
 .section-covers {
-  background-image: url('../../img/covers/background.jpg');
+  background-image: url('../../img/covers/background.webp');
   background-size: cover;
   backdrop-filter: blur(15px);
   background-color: rgba(217, 217, 217, 0.04);
