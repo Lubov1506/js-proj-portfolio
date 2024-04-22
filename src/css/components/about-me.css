@@ -204,7 +204,7 @@
     letter-spacing: -0.02em;
   }
 }
-button.ac-trigger.custom {
+.my-information button.ac-trigger.custom {
   height: 72px;
   display: flex;
   justify-content: space-between;
