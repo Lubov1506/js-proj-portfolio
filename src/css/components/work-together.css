@@ -358,6 +358,7 @@
 }
 .scroll-up-svg {
   stroke: var(--main-text);
+  fill: none;
   width: 20px;
   height: 20px;
 }
