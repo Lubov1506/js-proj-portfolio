@@ -126,7 +126,7 @@ p.ac-text {
   .accordion-container.faq {
     grid-template-columns: 50% 50%;
   }
-
+ 
   .ac.faq-item {
     border: none;
     padding-bottom: 32px;
