@@ -14,7 +14,7 @@
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 40px;
-  line-height: 100%;
+  line-height: 120%;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: var(--main-text);
@@ -152,9 +152,10 @@
   }
   .work-together-avatar {
     display: inline-block;
-    transform: translate(-9px, 12px);
+    transform: translateY(12px);
   }
   .work-together-title {
+    display: block;
     font-size: 64px;
     margin-bottom: 18px;
   }
@@ -202,7 +203,7 @@
   }
   .work-together-avatar {
     display: inline-block;
-    transform: translate(-9px, 12px);
+    transform: translateY(12px);
   }
   .work-together-form {
     gap: 0px;
@@ -357,6 +358,7 @@
 }
 .scroll-up-svg {
   stroke: var(--main-text);
+  fill: none;
   width: 20px;
   height: 20px;
 }
