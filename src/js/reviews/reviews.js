@@ -8,10 +8,10 @@ import 'swiper/css/bundle';
 const urlapi = 'https://portfolio-js.b.goit.study/api/reviews';
 let reviewsswiper;
 const reviewlist = document.querySelector('.reviews-list');
-const swiperContainer = document.querySelector('.swiper-reviews');
+// const swiperContainer = document.querySelector('.swiper-reviews');
 const prevbtnEl = document.querySelector('.js-btn-prev');
 const nextbtnEl = document.querySelector('.js-btn-next');
-let theEnd = false;
+prevbtnEl.classList.add('swiper-button-disabled');
 
 const fetchReviews = async url => {
   try {
@@ -46,15 +46,14 @@ fetchReviews(urlapi).then(reviews => {
   reviewsswiper = new Swiper('.swiper-reviews', {
     modules: [Navigation],
     direction: 'horizontal',
-    observer: true,
-    observeParents: true,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
       pageUpDown: true,
       tabKeys: true,
     },
-
+    slidesPerView: 1,
+    autoplay: false,
     grabCursor: true,
 
     breakpoints: {
@@ -71,19 +70,41 @@ fetchReviews(urlapi).then(reviews => {
         spaceBetween: 16,
       },
     },
-    navigation: {
-      nextEl: '.js-btn-next',
-      prevEl: '.js-btn-prev',
+    on: {
+      slideChange: () => {
+        updateButtonsState();
+      },
     },
   });
 });
 
-const cards = document.querySelectorAll('.card');
+const updateButtonsState = () => {
+  if (reviewsswiper.isBeginning) {
+    prevbtnEl.disabled = true;
+    prevbtnEl.classList.add('swiper-button-disabled');
+  } else {
+    prevbtnEl.disabled = false;
+    prevbtnEl.classList.remove('swiper-button-disabled');
+  }
 
-cards.forEach(card => {
-  card.addEventListener('touchstart', () => {
-    card.focus();
-  });
+  if (reviewsswiper.isEnd) {
+    nextbtnEl.disabled = true;
+    nextbtnEl.classList.add('swiper-button-disabled');
+  } else {
+    nextbtnEl.disabled = false;
+    nextbtnEl.classList.remove('swiper-button-disabled');
+  }
+};
+
+nextbtnEl.addEventListener('click', function (event) {
+  event.preventDefault();
+  reviewsswiper.slideNext();
+  updateButtonsState();
+});
+prevbtnEl.addEventListener('click', function (event) {
+  event.preventDefault();
+  reviewsswiper.slidePrev();
+  updateButtonsState();
 });
 
 reviewlist.addEventListener('click', function (event) {
