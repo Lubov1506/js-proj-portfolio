@@ -11,6 +11,7 @@ const reviewlist = document.querySelector('.reviews-list');
 const swiperContainer = document.querySelector('.swiper-reviews');
 const prevbtnEl = document.querySelector('.js-btn-prev');
 const nextbtnEl = document.querySelector('.js-btn-next');
+
 let theEnd = false;
 
 const fetchReviews = async url => {
@@ -48,8 +49,6 @@ fetchReviews(urlapi).then(reviews => {
     direction: 'horizontal',
     observer: true,
     observeParents: true,
-    slidesPerView: 1,
-    spaceBetween: 18,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -60,6 +59,10 @@ fetchReviews(urlapi).then(reviews => {
     grabCursor: true,
 
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 18,
+      },
       768: {
         slidesPerView: 2,
         spaceBetween: 16,
@@ -76,33 +79,21 @@ fetchReviews(urlapi).then(reviews => {
   });
 });
 
-swiperContainer.addEventListener('keydown', event => {
-  if (event.keyCode === 9) {
-    if (isInViewport(swiperContainer)) {
-      event.preventDefault();
-      if (!reviewsswiper.isEnd && !theEnd) {
-        reviewsswiper.slideNext();
-        if (reviewsswiper.isEnd) {
-          prevbtnEl.focus();
-          theEnd = true;
-        }
-      } else if (theEnd && !reviewsswiper.isBeginning) {
-        reviewsswiper.slidePrev();
-        if (reviewsswiper.isBeginning) {
-          nextbtnEl.focus();
-          theEnd = false;
-        }
-      }
-    }
-  }
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+  card.addEventListener('touchstart', () => {
+    card.focus();
+  });
 });
-export const isInViewport = element => {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
+
+reviewlist.addEventListener('click', function (event) {
+  event.preventDefault();
+  let targetElement = event.target;
+  let children = this.children;
+  Array.from(children).forEach(function (child) {
+    if (child.contains(targetElement)) {
+      child.classList.toggle('click');
+    }
+  });
+});
