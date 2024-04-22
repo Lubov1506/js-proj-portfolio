@@ -48,8 +48,6 @@ fetchReviews(urlapi).then(reviews => {
     direction: 'horizontal',
     observer: true,
     observeParents: true,
-    slidesPerView: 1,
-    spaceBetween: 18,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -60,6 +58,10 @@ fetchReviews(urlapi).then(reviews => {
     grabCursor: true,
 
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 18,
+      },
       768: {
         slidesPerView: 2,
         spaceBetween: 16,
