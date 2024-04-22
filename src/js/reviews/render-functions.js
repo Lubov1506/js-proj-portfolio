@@ -11,6 +11,7 @@ export const createReviewsList = reviews => {
               class="reviews-avatar"
               alt="${reviewData.author}"
               src="${reviewData.avatar_url}" 
+              loading="lazy"
             />          
 
           <h3 class="reviews-name">${reviewData.author}</h3>
@@ -23,6 +24,7 @@ export const createReviewsList = reviews => {
             class="reviews-img"
             alt="${reviewData.author} grossest"
             src="${reviewData.avatar_url}"
+            loading="lazy"
           />
         </div>
      
