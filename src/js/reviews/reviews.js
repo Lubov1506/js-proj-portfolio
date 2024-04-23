@@ -109,7 +109,7 @@ prevbtnEl.addEventListener('click', event => {
 reviewlist.addEventListener('click', event => {
   event.preventDefault();
   let targetElement = event.target;
-  let children = this.children;
+  let children = reviewlist.children;
   Array.from(children).forEach(child => {
     if (child.contains(targetElement)) {
       child.classList.toggle('click');
