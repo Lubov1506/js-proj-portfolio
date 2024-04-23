@@ -1,0 +1,16 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-menu-btn-open" viewBox="0 0 32 32">
+            <path stroke="#FAFAFA" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.5 9.917h21m-21 8.166h21"/>
+        </symbol>
+
+        <symbol id="icon-menu-btn-close" viewBox="0 0 28 28">
+            <path d="M21 7L7 21" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 7L21 21" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+
+    </defs>
+</svg>
