@@ -8,7 +8,6 @@ import 'swiper/css/bundle';
 const urlapi = 'https://portfolio-js.b.goit.study/api/reviews';
 let reviewsswiper;
 const reviewlist = document.querySelector('.reviews-list');
-// const swiperContainer = document.querySelector('.swiper-reviews');
 const prevbtnEl = document.querySelector('.js-btn-prev');
 const nextbtnEl = document.querySelector('.js-btn-next');
 prevbtnEl.classList.add('swiper-button-disabled');
@@ -96,24 +95,27 @@ const updateButtonsState = () => {
   }
 };
 
-nextbtnEl.addEventListener('click', function (event) {
+nextbtnEl.addEventListener('click', event => {
   event.preventDefault();
   reviewsswiper.slideNext();
   updateButtonsState();
 });
-prevbtnEl.addEventListener('click', function (event) {
+prevbtnEl.addEventListener('click', event => {
   event.preventDefault();
   reviewsswiper.slidePrev();
   updateButtonsState();
 });
 
-reviewlist.addEventListener('click', function (event) {
+reviewlist.addEventListener('click', event => {
   event.preventDefault();
   let targetElement = event.target;
   let children = this.children;
-  Array.from(children).forEach(function (child) {
+  Array.from(children).forEach(child => {
     if (child.contains(targetElement)) {
       child.classList.toggle('click');
     }
   });
+});
+window.addEventListener('resize', () => {
+  updateButtonsState();
 });
