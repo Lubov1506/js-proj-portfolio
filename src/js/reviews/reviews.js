@@ -106,3 +106,15 @@ prevbtnEl.addEventListener('click', function (event) {
   reviewsswiper.slidePrev();
   updateButtonsState();
 });
+
+
+nextbtnEl.addEventListener('click', function (event) {
+  event.preventDefault();
+  reviewsswiper.slideNext();
+  updateButtonsState();
+});
+prevbtnEl.addEventListener('click', function (event) {
+  event.preventDefault();
+  reviewsswiper.slidePrev();
+  updateButtonsState();
+});
