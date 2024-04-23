@@ -107,13 +107,14 @@ prevbtnEl.addEventListener('click', function (event) {
   updateButtonsState();
 });
 
-reviewlist.addEventListener('click', function (event) {
+
+nextbtnEl.addEventListener('click', function (event) {
   event.preventDefault();
-  let targetElement = event.target;
-  let children = this.children;
-  Array.from(children).forEach(function (child) {
-    if (child.contains(targetElement)) {
-      child.classList.toggle('click');
-    }
-  });
+  reviewsswiper.slideNext();
+  updateButtonsState();
+});
+prevbtnEl.addEventListener('click', function (event) {
+  event.preventDefault();
+  reviewsswiper.slidePrev();
+  updateButtonsState();
 });
