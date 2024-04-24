@@ -3,9 +3,14 @@
 /* #region mobile version */
 
 .work-together-section {
+  margin-top: 64px;
   padding-bottom: 32px;
-  padding-top: 64px;
+  padding-top: 32px;
+  background-image: url('../img/work-together/glass-effect-mob.png');
+  background-repeat: no-repeat;
+  background-position: right;
 }
+
 .work-together-avatar {
   display: inline-block;
   transform: translateY(10px);
@@ -147,9 +152,12 @@
 
 @media screen and (min-width: 768px) {
   .work-together-section {
-    padding-top: 128px;
+    margin-top: 96px;
+    padding-top: 80px;
     padding-bottom: 169px;
+    background-image: url('../img/work-together/glass-effect-tab.png');
   }
+
   .work-together-avatar {
     display: inline-block;
     transform: translateY(12px);
@@ -197,10 +205,13 @@
 /* #region adaptive desktop */
 @media screen and (min-width: 1440px) {
   .work-together-section {
-    padding-top: 162px;
+    margin-top: 164px;
+    padding-top: 80px;
     display: flex;
     justify-content: center;
+    background-image: url('../img/work-together/glass-effect-desc.png');
   }
+
   .work-together-avatar {
     display: inline-block;
     transform: translateY(12px);
